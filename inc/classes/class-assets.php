@@ -45,11 +45,14 @@ class Assets
 
         wp_register_style('fontawesome_css', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css', [], false, 'all');
 
+        wp_register_style('index_css', HUB_WP_DIR_URI . '/assets/sass/index.css', [], false, 'all');
+
         /**
          * Enqueuing CSS
          */
         wp_enqueue_style('bootstrap_css');
         wp_enqueue_style('fontawesome_css');
+        wp_enqueue_style('index_css');
     }
     public function register_scripts()
     {
