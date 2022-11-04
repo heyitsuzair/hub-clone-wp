@@ -38,8 +38,8 @@ class Nav_Menus
     {
         register_nav_menus(
             [
-                'bloggar_header_menu' => __('Header Menu', 'bloggar_wp'),
-                'bloggar_footer_menu' => __('Footer Menu', 'bloggar_wp'),
+                'primary' => __('Header Menu', 'HUB_WP'),
+                'secondary' => __('Footer Menu', 'HUB_WP'),
             ]
         );
     }

@@ -1,2 +1,11 @@
 @import './variables/index';
 @import './globals/index';
+@import './mixin/index';
+@import './header/index';
+@import './header/sliding-menu';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
