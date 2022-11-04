@@ -26,7 +26,3 @@
             <!-- <?php get_template_part('template-parts/header/MainHeader'); ?> -->
         </header>
         <div id="content">
-
-</body>
-
-</html>

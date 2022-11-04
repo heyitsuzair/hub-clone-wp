@@ -22,5 +22,7 @@ class HUB_WP
          @get_instance(): To Load Classes
          */
         Assets::get_instance();
+        Nav_Menus::get_instance();
+        Theme_Support::get_instance();
     }
 }
