@@ -21,5 +21,6 @@ class HUB_WP
         /**
          @get_instance(): To Load Classes
          */
+        Assets::get_instance();
     }
 }
