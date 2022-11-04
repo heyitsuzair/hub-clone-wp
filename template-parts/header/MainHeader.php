@@ -6,7 +6,7 @@
  */
 ?>
 
-<div class="header d-flex justify-content-between">
+<div class="header mx-3 py-3 d-flex justify-content-between align-items-center">
     <div class="col-3 header-left">
         <?php
         if (has_custom_logo()) {
@@ -24,9 +24,21 @@
         }
         ?>
     </div>
-    <div class="col-9 header-right">
-        <div class="header-desktop">
-            <?php wp_nav_menu() ?>
+    <div class="col-9 header-right d-flex justify-content-end">
+        <div class="header-inner">
+
+
+            <input id="hamburger" class="hamburger" type="checkbox" />
+            <label class="hamburger" for="hamburger">
+                <i></i>
+            </label>
+            <section class="drawer-list">
+                <?php
+                wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'd-flex justify-content-between list-unstyled flex-column align-items-center'])
+                ?>
+            </section>
+            </content>
+
         </div>
     </div>
 </div>

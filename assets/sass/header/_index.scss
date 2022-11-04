@@ -1,0 +1,21 @@
+#master-header{
+    background-color: #f6f6f6;
+    .header{
+        .header-right{
+            .header-inner{
+            
+                .menu-item{
+                    a{
+                        text-decoration: $td_none;
+                        color: black;
+                    }
+                    @include flex(center,center,row);
+
+                    .sub-menu{
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}

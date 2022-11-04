@@ -22,7 +22,7 @@
     }
     ?>
     <div id="page">
-        <header id="master-header" class="mx-3 py-3">
+        <header id="master-header">
             <?php get_template_part('template-parts/header/MainHeader'); ?>
         </header>
         <div id="content">
