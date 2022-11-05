@@ -1,19 +1,36 @@
 #master-header{
-    background-color: #f6f6f6;
+    background-color: $color_gray;
     .header{
         .header-right{
             .header-inner{
-            
                 .menu-item{
+                    text-align: center;
                     a{
                         text-decoration: $td_none;
                         color: black;
+                        padding: .5rem 0;
+                        text-align: center;
+                        background-color: $color_gray
                     }
+                   .menu-item-has-children {
+                    @include flex(center,center,column);
+                    
+                }
+                .anchor-item-menu{
                     @include flex(center,center,row);
+                    cursor: pointer;
+                }
+                .menu-arrow{
+                    cursor: pointer;
+                }
+                .sub-menu{
+                    cursor: pointer;
+                    display: none;
 
-                    .sub-menu{
-                        position: absolute;
+                    &.active{
+                        @include flex(center,center,column);
                     }
+                }
                 }
             }
         }
