@@ -33,7 +33,9 @@ get_header();
                         ?>
             </div>
         </div>
-        <div id="more_posts">Load More</div>
+        <div class="next-prev-links my-5 py-5">
+            <?php hub_numeric_posts_nav(); ?>
+        </div>
 
     </div>
     <?php

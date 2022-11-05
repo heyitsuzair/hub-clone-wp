@@ -412,9 +412,9 @@ label.hamburger > i:after {
 }
 .post-row .post-card .entry-header .date-published:hover {
   background-color: #184341;
-  box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
-  -webkit-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
-  -moz-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
   color: white;
 }
 .post-row .post-card .entry-header .blog-card-badge {
@@ -430,9 +430,9 @@ label.hamburger > i:after {
 }
 .post-row .post-card .entry-header .blog-card-badge:hover {
   background-color: #184341;
-  box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
-  -webkit-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
-  -moz-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
   color: white;
 }
 .post-row .post-card .entry-header .blog-card-badge:hover a {
@@ -450,6 +450,60 @@ label.hamburger > i:after {
 }
 .post-row .post-card .entry-footer .author-pic img {
   width: 100%;
+}
+
+.next-prev-links .navigation ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 1rem;
+}
+.next-prev-links .navigation ul li.active a {
+  background-color: #184341;
+  box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 50rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+.next-prev-links .navigation ul li a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  border-radius: 50rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+.next-prev-links .navigation ul li a:hover {
+  background-color: #184341;
+  box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  border: 10px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #184341;
+  border-radius: 8px;
 }
 
 * {
