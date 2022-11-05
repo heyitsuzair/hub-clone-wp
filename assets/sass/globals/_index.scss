@@ -4,3 +4,13 @@
 .color-primary{
     color: $color_primary;
 }
+.dot {
+    height: 4px;
+    width: 4px;
+    background-color: black;
+    border-radius: 50%;
+    display: inline-block;
+}
+.fw-600{
+    font-weight: 600;
+}
