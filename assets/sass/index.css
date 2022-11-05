@@ -7,6 +7,18 @@
   color: #184341;
 }
 
+.dot {
+  height: 4px;
+  width: 4px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
 #master-header {
   background-color: #f6f6f6;
 }
@@ -327,6 +339,7 @@ input.hamburger:checked ~ label open {
 }
 
 label.hamburger {
+  margin-right: 1rem;
   z-index: 9999;
   position: relative;
   display: block;
@@ -504,6 +517,25 @@ label.hamburger > i:after {
 ::-webkit-scrollbar-thumb {
   background: #184341;
   border-radius: 8px;
+}
+
+.single-blog {
+  background-color: #f6f6f6;
+}
+.single-blog .single-blog-content {
+  padding: 10rem;
+}
+.single-blog .single-blog-content .single-blog-category .post-categories li a {
+  text-decoration: none;
+  color: #184341;
+}
+.single-blog .single-blog-content .publish {
+  border-bottom: 2px solid #d3d3d3;
+  margin-top: 10rem;
+  padding-bottom: 1.5rem;
+}
+.single-blog .single-blog-content .single-blog-moto {
+  color: #737373;
 }
 
 * {

@@ -1,0 +1,25 @@
+.single-blog{
+    background-color: $color_gray;
+
+    .single-blog-content{
+        padding: 10rem;
+        .single-blog-category{
+            .post-categories{
+                li{
+                    a{
+                        text-decoration: none;
+                        color: $color_primary;
+                    }
+                }
+            }
+        }
+        .publish{
+            border-bottom: 2px solid #d3d3d3;
+            margin-top: 10rem;
+            padding-bottom: 1.5rem;
+        }
+        .single-blog-moto{
+            color:#737373;
+        }
+    }
+}

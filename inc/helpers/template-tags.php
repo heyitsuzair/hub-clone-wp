@@ -81,3 +81,45 @@ function hub_numeric_posts_nav()
 
     echo '</ul></div>' . "\n";
 }
+
+
+/**
+ * Estimated reading time in minutes
+ * 
+ * @param $content
+ * @param $words_per_minute
+ * @param $with_gutenberg
+ * 
+ * @return int estimated time in minutes
+ */
+
+function estimate_reading_time_in_minutes($content = '', $words_per_minute = 300, $with_gutenberg = false)
+{
+    // In case if content is build with gutenberg parse blocks
+    if ($with_gutenberg) {
+        $blocks = parse_blocks($content);
+        $contentHtml = '';
+
+        foreach ($blocks as $block) {
+            $contentHtml .= render_block($block);
+        }
+
+        $content = $contentHtml;
+    }
+
+    // Remove HTML tags from string
+    $content = wp_strip_all_tags($content);
+
+    // When content is empty return 0
+    if (!$content) {
+        return 0;
+    }
+
+    // Count words containing string
+    $words_count = str_word_count($content);
+
+    // Calculate time for read all words and round
+    $minutes = ceil($words_count / $words_per_minute);
+
+    return $minutes;
+}

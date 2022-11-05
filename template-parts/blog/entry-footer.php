@@ -17,7 +17,7 @@ if (is_home()) {
     <div class="author-pic">
         <img class="rounded-circle" src="<?php echo get_avatar_url(get_the_author()); ?>" alt="<?php the_author() ?>">
     </div>
-    <div class="author-pic">
+    <div class="author-name">
         <?php the_author(); ?>
     </div>
 </div>
