@@ -49,7 +49,7 @@ class Nav_Menus
     public function add_sub_menu_arrow($item_output, $item, $depth, $args)
     {
         if (in_array('menu-item-has-children', $item->classes)) {
-            $arrow = ' <i class="fa fa-angle-down"></i>'; // Change the class to your font icon
+            $arrow = ' <i class="fa fa-angle-down menu-arrow"></i>'; // Change the class to your font icon
             $item_output = str_replace('</a>', '</a>' . $arrow . '', $item_output);
         }
         return $item_output;

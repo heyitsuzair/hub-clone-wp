@@ -92,9 +92,7 @@
       transform: translatex(100vw);
       /* ie workaround */
       -ms-transform: translatex(-100vw);
-      &:last-child {
-        margin-bottom: 2em;
-      }
+      
       a {
         text-decoration: none;
         color: $text;
@@ -109,6 +107,7 @@
         &:hover {
           cursor: pointer;
           @include alpha-attribute('background-color', rgba($main, 0.5), white);
+          
         }
       }
     }
@@ -212,9 +211,4 @@
     }
   }
   
-  label.hamburger {
-    position: fixed;
-    top: 8px;
-    right: 25px;
-  }
   
