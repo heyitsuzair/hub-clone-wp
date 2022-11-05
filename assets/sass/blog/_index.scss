@@ -8,26 +8,45 @@
     background-color: $color_light_green;
 
     .entry-header{
+        .date-published{
+            background-color: #fff;
+            color: #000;
+            border-radius: 50rem;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+           transition:  all .3s;
+           font-size: 15px;
+            &:hover{
+                background-color: $color_primary;
+                box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                -webkit-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                -moz-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                color: white;
+            }
+        }
         .blog-card-badge{
-            ul{
-                background-color: #fff;
-                color: #000;
-                border-radius: 50rem;
-                text-align: center;
-                padding: 0.5rem 1rem;
-                font-weight: 600;
-                cursor: pointer;
-               transition:  all .3s;
-               font-size: 15px;
-                &:hover{
-                    background-color: $color_primary;
-                    box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
-                    -webkit-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
-                    -moz-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
-                    a{
-                        color: white;
-                    }
+            background-color: #fff;
+            color: #000;
+            border-radius: 50rem;
+            text-align: center;
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            cursor: pointer;
+           transition:  all .3s;
+           font-size: 15px;
+            &:hover{
+                background-color: $color_primary;
+                box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                -webkit-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                -moz-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.59);
+                color: white;
+                a{
+                    color: white;
                 }
+            }
+            ul{       
                 a{
                     color: black;
                     text-decoration: $td_none;
