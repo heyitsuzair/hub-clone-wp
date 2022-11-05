@@ -6,7 +6,13 @@
 
 .post-card{
     background-color: $color_light_green;
-
+    transition:  all .3s;
+    &:hover{
+        box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.25);
+        -webkit-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.25);
+        -moz-box-shadow: 0px 9px 41px -15px rgba(0,0,0,0.25);
+        cursor: pointer;
+    }
     .entry-header{
         .date-published{
             background-color: #fff;
@@ -51,6 +57,17 @@
                     color: black;
                     text-decoration: $td_none;
                 }
+            }
+        }
+    }
+    .entry-content{
+        min-height: 10vh;
+    }
+    .entry-footer{
+        .author-pic{
+            width: 15%;
+            img{
+                width: 100%;
             }
         }
     }
