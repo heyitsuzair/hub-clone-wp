@@ -13,6 +13,7 @@ if (!defined('HUB_DIR_URI')) {
 }
 require_once HUB_WP_DIR_PATH . './inc/helpers/autoloader.php';
 require_once HUB_WP_DIR_PATH . './inc/helpers/template-tags.php';
+require_once HUB_WP_DIR_PATH . './inc/helpers/ajax-load-more.php';
 
 function hub_get_theme_instance()
 {

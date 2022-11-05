@@ -27,11 +27,14 @@ get_header();
                 <div class="col-md-6 col-sm-12 col-xs-12 col-lg-4">
                     <?php get_template_part('template-parts/content'); ?>
                 </div>
+
                 <?php
                         endwhile
                         ?>
             </div>
         </div>
+        <div id="more_posts">Load More</div>
+
     </div>
     <?php
             } else {
