@@ -3,6 +3,10 @@
   text-decoration: none;
 }
 
+.color-primary {
+  color: #184341;
+}
+
 #master-header {
   background-color: #f6f6f6;
 }
@@ -378,6 +382,74 @@ label.hamburger > i:before {
 }
 label.hamburger > i:after {
   transform: translate(-50%, 14px);
+}
+
+@media (max-width: 768px) {
+  .post-row {
+    gap: 1.3rem;
+  }
+}
+.post-row .post-card {
+  background-color: #eef2f4;
+  transition: all 0.3s;
+}
+.post-row .post-card:hover {
+  box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+.post-row .post-card .entry-header .date-published {
+  background-color: #fff;
+  color: #000;
+  border-radius: 50rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+.post-row .post-card .entry-header .date-published:hover {
+  background-color: #184341;
+  box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  color: white;
+}
+.post-row .post-card .entry-header .blog-card-badge {
+  background-color: #fff;
+  color: #000;
+  border-radius: 50rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 15px;
+}
+.post-row .post-card .entry-header .blog-card-badge:hover {
+  background-color: #184341;
+  box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  -webkit-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow: 0px 9px 41px -15px rgba(0, 0, 0, 0.59);
+  color: white;
+}
+.post-row .post-card .entry-header .blog-card-badge:hover a {
+  color: white;
+}
+.post-row .post-card .entry-header .blog-card-badge ul a {
+  color: black;
+  text-decoration: none;
+}
+.post-row .post-card .entry-content {
+  min-height: 10vh;
+}
+.post-row .post-card .entry-footer .author-pic {
+  width: 15%;
+}
+.post-row .post-card .entry-footer .author-pic img {
+  width: 100%;
 }
 
 * {
