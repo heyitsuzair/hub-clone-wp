@@ -123,3 +123,14 @@ function estimate_reading_time_in_minutes($content = '', $words_per_minute = 300
 
     return $minutes;
 }
+
+/**
+ * Function To Get Placeholder Image
+ */
+
+function get_place_holder_image($class)
+{
+    $place_holder = sprintf('<img class="%1$s" src=' . HUB_WP_DIR_URI . '/assets/img/placeholder.png' . ' alt="Loading..." loading="lazy">', esc_attr($class));
+
+    return $place_holder;
+}

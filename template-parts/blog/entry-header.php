@@ -27,21 +27,24 @@ if (is_home()) {
 } elseif (is_single()) {
 ?>
 <section class="post-<?php the_ID() ?>-single-page-header single-blog-content">
-    <div class="d-flex flex-row justify-content-between gap-4">
-        <div class="d-flex flex-column justify-content-between gap-4">
+    <div
+        class="d-flex flex-lg-row flex-md-column flex-sm-column single-blog-inner justify-content-between align-items-lg-center align-items-md-start gap-4">
+        <div class="d-flex flex-column justify-content-between gap-4 single-blog-meta">
             <span class="single-blog-category">
                 <?php
                     the_category();
                     ?>
             </span>
-            <h3 class="fw-bold w-75">
+            <h2 class="fw-bold">
                 <?php the_title(); ?>
-            </h3>
+            </h2>
             <h5 class="single-blog-moto">Success Needs Hardwork</h5>
         </div>
-        <div>Hello</div>
+        <div class="text-lg-end text-md-start text-sm-start post-img">
+            <?php echo has_post_thumbnail() ? the_post_thumbnail('post-thumbnail img-thumbnail rounded p-0') : get_place_holder_image('attachment-post-thumbnail img-thumbnail rounded p-0'); ?>
+        </div>
     </div>
-    <div class="publish d-flex align-items-center flex-row justify-content-between">
+    <div class="publish d-flex align-items-center flex-lg-row flex-md-row flex-sm-row justify-content-between gap-3">
         <div class="left d-flex flex-row gap-3 align-items-center">
             <span class="fw-600"><?php echo get_the_date('F j, Y'); ?></span>
             <span class="dot"></span>

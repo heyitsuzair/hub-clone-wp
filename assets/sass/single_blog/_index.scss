@@ -3,6 +3,12 @@
 
     .single-blog-content{
         padding: 10rem;
+        @media (max-width:991px){
+            padding: 6rem;
+        }
+        @media (max-width:576px){
+            padding: 3rem;
+        }
         .single-blog-category{
             .post-categories{
                 li{
@@ -15,11 +21,37 @@
         }
         .publish{
             border-bottom: 2px solid #d3d3d3;
-            margin-top: 10rem;
+            margin-top: 4rem;
             padding-bottom: 1.5rem;
+
+            @media (max-width:576px){
+                flex-direction: column;
+            }
         }
         .single-blog-moto{
             color:#737373;
         }
+        .attachment-post-thumbnail{
+            width: 50%;
+            object-fit: cover;
+            @media (max-width:991px){
+                width: 100%;
+            }
+        }
+        .post-img{
+            @media (max-width:991px){
+                order: 1;
+            }
+        }
+       .single-blog-inner{
+        @media (max-width:576px){
+            flex-direction: column;
+        }
+        .single-blog-meta{
+            @media (max-width:991px){
+                order: 2;
+            }
+        }
+       }
     }
 }
