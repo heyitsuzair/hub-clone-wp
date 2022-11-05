@@ -62,6 +62,7 @@ class Assets
         wp_register_script('bootstrap_js', HUB_WP_DIR_URI . '/assets/libraries/bootstrap.bundle.min.js', ['jquery'], false, true);
         wp_register_script('header_js', HUB_WP_DIR_URI . '/assets/js/header/index.js', ['jquery'], false, true);
 
+
         /**
          * Enqueuing JS
          */
