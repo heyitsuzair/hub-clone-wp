@@ -6,7 +6,15 @@
  * @package HUB_WP
  */
 
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+    $url = "https://";
+else
+    $url = "http://";
+// Append the host(domain name, ip) to the URL.   
+$url .= $_SERVER['HTTP_HOST'];
 
+// Append the requested resource location to the URL   
+$url .= $_SERVER['REQUEST_URI'];
 
 ?>
 
@@ -28,11 +36,29 @@ if (is_home()) {
         <div class="col-lg-2 d-sm-none d-md-none d-lg-block content-left single-<?php the_ID() ?>-content-left">
             <div class="d-flex flex-column content-left-author text-center gap-5 mx-5 pt-5">
                 <div class="d-flex align-items-center text-center justify-content-end gap-2 author-info">
-                    <img src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
+                    <img class="rounded" src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
                         alt="<?php echo get_the_author_meta('ID') ?>">
                     <span class="author-name">Muhammad Uzair</span>
                 </div>
-                <div>Hello</div>
+                <div class="text-start d-flex flex-column gap-4 socials <?php the_ID() ?>-socials">
+                    <a class="td-none social-link fb"
+                        href="<?php echo esc_url('https://www.facebook.com/sharer/sharer.php?u=' .  $url) ?>"
+                        target="_blank">
+                        <i class="fa fa-brands fa-facebook" aria-hidden="true"></i>
+                        <span>Facebook</span>
+                    </a>
+                    <a class="td-none social-link twitter" href="<?php echo esc_url('
+http://twitter.com/share?text=Checkout This Amazing Blog!&url=' .  $url) ?>" target="_blank">
+                        <i class="fa fa-brands fa-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a>
+                    <a class="td-none social-link linkedin"
+                        href="<?php echo esc_url('https://www.linkedin.com/sharing/share-offsite/?url=' .  $url) ?>"
+                        target="_blank">
+                        <i class="fa fa-brands fa-linkedin" aria-hidden="true"></i>
+                        <span>Linkedin</span>
+                    </a>
+                </div>
             </div>
         </div>
         <div class="col-lg-8 col-sm-12 col-md-12 px-5 text-center">

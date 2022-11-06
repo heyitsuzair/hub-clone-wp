@@ -56,7 +56,7 @@
     .single-blog-content{
         .content-left{
             transition: .5s all ease;
-            transform: translateX(-13rem);
+            transform: translateX(-14rem);
             @media(max-width:576px){
                 display: none;
             }
@@ -74,6 +74,17 @@
                     margin: 0 -7rem;
                     .author-name{
                         transform: rotate(-90deg) translateY(-54px);
+                    }
+                }
+                .socials{
+                    .social-link{
+                        color: black;
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        justify-content: center;
+                        padding-bottom: .5rem;
+                        border-bottom: 1px solid #d3d3d3;
                     }
                 }
             }

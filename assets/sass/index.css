@@ -579,7 +579,7 @@ label.hamburger > i:after {
 }
 .single-blog .single-blog-content .content-left {
   transition: 0.5s all ease;
-  transform: translateX(-13rem);
+  transform: translateX(-14rem);
 }
 @media (max-width: 576px) {
   .single-blog .single-blog-content .content-left {
@@ -602,6 +602,15 @@ label.hamburger > i:after {
 }
 .single-blog .single-blog-content .content-left .content-left-author .author-info .author-name {
   transform: rotate(-90deg) translateY(-54px);
+}
+.single-blog .single-blog-content .content-left .content-left-author .socials .social-link {
+  color: black;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d3d3d3;
 }
 .single-blog .single-blog-content .content-right {
   transition: 0.5s all ease;
