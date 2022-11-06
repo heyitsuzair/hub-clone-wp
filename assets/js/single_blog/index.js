@@ -1,11 +1,21 @@
 (function ($) {
-  const target = $(".content-left");
-  var waypoint = new Waypoint({
-    element: target,
+  const lefTarget = $(".content-left");
+  var contentLeftTrigger = new Waypoint({
+    element: lefTarget,
     handler: function (direction) {
       direction === "down"
-        ? $(target).addClass("active")
-        : $(target).removeClass("active");
+        ? $(lefTarget).addClass("active")
+        : $(lefTarget).removeClass("active");
     },
+  });
+  const rightTrigger = $(".content-right");
+  var contentRightTrigger = new Waypoint({
+    element: rightTrigger,
+    handler: function (direction) {
+      direction === "down"
+        ? $(rightTrigger).addClass("active")
+        : $(rightTrigger).removeClass("active");
+    },
+    // offset: 100,
   });
 })(jQuery);
