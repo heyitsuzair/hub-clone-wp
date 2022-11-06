@@ -55,8 +55,11 @@
     }
     .single-blog-content{
         .content-left{
-            transition: .5s all;
+            transition: .5s all ease;
             transform: translateX(-13rem);
+            @media(max-width:576px){
+                display: none;
+            }
             &.active{
                 transform: translateX(0);
             }
@@ -70,10 +73,30 @@
                 .author-info{
                     margin: 0 -7rem;
                     .author-name{
-                        
                         transform: rotate(-90deg) translateY(-54px);
                     }
                 }
+            }
+        }
+        .content-right{
+            transition: .5s all ease;
+            transform: translateX(9rem);
+            @media(max-width:576px){
+                display: none;
+            }
+            &.active{
+                transform: translateX(0);
+            }
+            .content-right-author{
+                position: sticky;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+            
+               .contact{
+                transform: rotate(-90deg) translateX(-5rem);
+               }
             }
         }
     }
