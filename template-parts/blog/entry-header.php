@@ -26,7 +26,7 @@ if (is_home()) {
 <?php
 } elseif (is_single()) {
 ?>
-<section class="post-<?php the_ID() ?>-single-page-header single-blog-content">
+<section class="post-<?php the_ID() ?>-single-page-header single-blog-header">
     <div
         class="d-flex flex-lg-row flex-md-column flex-sm-column single-blog-inner justify-content-between align-items-lg-center align-items-md-start gap-4">
         <div class="d-flex flex-column justify-content-between gap-4 single-blog-meta">

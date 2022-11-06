@@ -1,7 +1,9 @@
 .single-blog{
     background-color: $color_gray;
-
-    .single-blog-content{
+    .single-blog-moto{
+        color:#737373;
+    }
+    .single-blog-header{
         padding: 10rem;
         @media (max-width:991px){
             padding: 6rem;
@@ -28,9 +30,6 @@
                 flex-direction: column;
             }
         }
-        .single-blog-moto{
-            color:#737373;
-        }
         .attachment-post-thumbnail{
             width: 50%;
             object-fit: cover;
@@ -53,5 +52,29 @@
             }
         }
        }
+    }
+    .single-blog-content{
+        .content-left{
+            transition: .5s all;
+            transform: translateX(-13rem);
+            &.active{
+                transform: translateX(0);
+            }
+            .content-left-author{
+                position: sticky;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+            
+                .author-info{
+                    margin: 0 -7rem;
+                    .author-name{
+                        
+                        transform: rotate(-90deg) translateY(-54px);
+                    }
+                }
+            }
+        }
     }
 }
