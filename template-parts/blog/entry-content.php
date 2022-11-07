@@ -36,9 +36,9 @@ if (is_home()) {
         <div class="col-lg-2 d-sm-none d-md-none d-lg-block content-left single-<?php the_ID() ?>-content-left">
             <div class="d-flex flex-column content-left-author text-center gap-5 mx-5 pt-5">
                 <div class="d-flex align-items-center text-center justify-content-end gap-2 author-info">
-                    <img class="rounded" src="<?php echo get_avatar_url(get_the_author_meta('ID')); ?>"
-                        alt="<?php echo get_the_author_meta('ID') ?>">
-                    <span class="author-name">Muhammad Uzair</span>
+                    <img class="rounded" src="<?php echo get_avatar_url(get_the_author()); ?>"
+                        alt="<?php the_author(); ?>">
+                    <span class="author-name"><?php the_author() ?></span>
                 </div>
                 <div class="text-start d-flex flex-column gap-4 socials <?php the_ID() ?>-socials">
                     <a class="td-none social-link fb"
