@@ -84,7 +84,10 @@ class Customizer_Footer
     {
         $this->register_footer_display_customization($wp_customize);
         $this->register_footer_bg_color_customization($wp_customize);
+        $this->register_footer_text_color_customization($wp_customize);
         $this->register_footer_paddings_customization($wp_customize);
+        $this->register_footer_leftcol_customization($wp_customize);
+        $this->register_footer_rightcol_customization($wp_customize);
     }
     public function register_footer_display_customization($wp_customize)
     {
@@ -121,6 +124,25 @@ class Customizer_Footer
             )
         ));
     }
+    public function register_footer_text_color_customization($wp_customize)
+    {
+        // Background Color Setting
+        $wp_customize->add_setting('footer-text-color-setting', [
+            'default' => '#ffffff',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Background Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'footer-text-color-control',
+            array(
+                'label'    => __('Text Color', 'wp_hub'),
+                'section'  => 'footer-section',
+                'settings' => 'footer-text-color-setting',
+            )
+        ));
+    }
     public function register_footer_paddings_customization($wp_customize)
     {
         // Paddings Setting
@@ -135,6 +157,36 @@ class Customizer_Footer
             'section' => 'footer-section',
             'settings' => 'footer-paddings-setting',
             'type' => 'number',
+        ]));
+    }
+    public function register_footer_leftcol_customization($wp_customize)
+    {
+        // Left Columns Setting
+        $wp_customize->add_setting('footer-leftcol-text-setting', [
+            'default' => 'Copyright © 2022 Muhammad Uzair',
+            'sanitize_callback' => [$this, 'sanitize_custom_textarea']
+        ]);
+        // Left Columns Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-leftcol-text-control', [
+            'label' => "Left Column Text",
+            'section' => 'footer-section',
+            'settings' => 'footer-leftcol-text-setting',
+            'type' => 'textarea',
+        ]));
+    }
+    public function register_footer_rightcol_customization($wp_customize)
+    {
+        // Right Columns Setting
+        $wp_customize->add_setting('footer-rightcol-text-setting', [
+            'default' => 'All Rights Reserved',
+            'sanitize_callback' => [$this, 'sanitize_custom_textarea']
+        ]);
+        // Right Columns Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-rightcol-text-control', [
+            'label' => "Right Column Text",
+            'section' => 'footer-section',
+            'settings' => 'footer-rightcol-text-setting',
+            'type' => 'textarea',
         ]));
     }
 }

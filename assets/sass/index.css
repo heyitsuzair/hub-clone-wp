@@ -699,9 +699,6 @@ label.hamburger > i:after {
 }
 
 #main-footer {
-  background-color: #151515;
-  color: white;
-  padding: 2rem 0;
   margin: -0.2rem;
 }
 @media (max-width: 576px) {

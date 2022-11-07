@@ -35,22 +35,31 @@ class Customizer_Styles
     public function register_head_styles()
     {
         /**
-         * $prefooter_bg_color Check If BG Color Value Is Empty Set The Default Background Color
+         * Check If BGs Color Value Is Empty Set The Default Background Colors ------------------>
          */
         $prefooter_bg_color = get_theme_mod('prefooter-bg-color-setting') == '' ? '#151515' : get_theme_mod('prefooter-bg-color-setting');
+        $footer_bg_color = get_theme_mod('footer-bg-color-setting') == '' ? '#151515' : get_theme_mod('footer-bg-color-setting');
 
         /**
-         * $prefooter_paddings Check If Padding Value Is Empty Set The Default Padding
+         * Check If Texts Color Value Is Empty Set The Default Background Colors ------------------>
+         */
+        $footer_text_color = get_theme_mod('footer-text-color-setting') == '' ? 'white' : get_theme_mod('footer-text-color-setting');
+
+        /**
+         *  Check If Paddings Value Is Empty Set The Default Padding ------------------>
          */
         $prefooter_paddings = get_theme_mod('prefooter-paddings-setting') == '' ? '3rem' : get_theme_mod('prefooter-paddings-setting') . 'rem';
-
-        $prefooter_display_seperators = get_theme_mod('prefooter-seperator-display-setting');
-        $prefooter_seperators_width = get_theme_mod('prefooter-seperator-width-setting');
+        $footer_paddings = get_theme_mod('footer-paddings-setting') == '' ? '2rem' : get_theme_mod('footer-paddings-setting') . 'rem';
 
         /**
-         * $prefooter_seperators_color Check If Seperator Color Value Is Empty Set The Default Seperator Color
+         *  Check If Seperators Color Value Is Empty Set The Default Seperator Color ------------------>
          */
         $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting') == '' ? '#ffffff12' : get_theme_mod('prefooter-seperator-color-setting');
+
+        // <---------------------------------------- ! ------------------------------------------->
+        $prefooter_display_seperators = get_theme_mod('prefooter-seperator-display-setting');
+        $prefooter_seperators_width = get_theme_mod('prefooter-seperator-width-setting');
+        // <---------------------------------------- ! ------------------------------------------->
 
 ?>
 <!-------------------------------------------------- Styling -------------------------------------------------->
@@ -70,6 +79,12 @@ class Customizer_Styles
     * First Check If The Seperators Are Enabled From Customizer Or Not, If Not Than Make Seperatos Width To 0px Else Put Its Original Width Coming From Customizer
     */
     border-bottom: <?php echo $prefooter_display_seperators ? $prefooter_seperators_width . 'px': '0px'?> solid <?php echo $prefooter_seperators_color ?>;
+}
+
+#main-footer {
+    background-color: <?php echo $footer_bg_color ?>;
+    color: <?php echo $footer_text_color ?>;
+    padding: <?php echo $footer_paddings ?> 0;
 }
 </style>
 
