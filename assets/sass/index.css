@@ -676,6 +676,7 @@ label.hamburger > i:after {
   margin-top: 1rem;
 }
 .comment-container .comment-form .form-submit input {
+  border: none;
   background-color: black;
   color: white;
   border-radius: 5px;
