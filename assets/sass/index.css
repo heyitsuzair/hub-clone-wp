@@ -704,6 +704,13 @@ label.hamburger > i:after {
   }
 }
 
+#main-footer {
+  background-color: #151515;
+  color: white;
+  padding: 2rem 0;
+  margin: -0.2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
