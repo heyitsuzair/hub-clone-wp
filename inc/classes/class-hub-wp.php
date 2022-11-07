@@ -27,5 +27,6 @@ class HUB_WP
         Comment_Form::get_instance();
         Register_Sidebars::get_instance();
         Customizer_Prefooter::get_instance();
+        Customizer_Styles::get_instance();
     }
 }
