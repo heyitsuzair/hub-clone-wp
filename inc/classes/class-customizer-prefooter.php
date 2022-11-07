@@ -97,7 +97,6 @@ class Customizer_Prefooter
         // Display Setting
         $wp_customize->add_setting('prefooter-display-setting', [
             'default' => false,
-            'type'       => 'option',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => [$this, 'sanitize_checkbox'],
         ]);
@@ -149,7 +148,6 @@ class Customizer_Prefooter
         // Seperators Display Setting
         $wp_customize->add_setting('prefooter-seperator-display-setting', [
             'default' => true,
-            'type'       => 'option',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => [$this, 'sanitize_checkbox'],
         ]);
