@@ -42,29 +42,29 @@ class Register_Sidebars
          */
         $sidebars = [
             [
-                'name'          => __('Footer Bar 1', 'wp_hub'),
+                'name'          => 'Footer Bar 1',
                 'id'            => 'footerbar-1',
-                'description'   => __('Widgets in this bar will appear in footer sidebar No. 1', 'wp_hub'),
+                'description'   => 'Widgets in this bar will appear in footer sidebar No. 1',
             ],
             [
-                'name'          => __('Footer Bar 2', 'wp_hub'),
+                'name'          => 'Footer Bar 2',
                 'id'            => 'footerbar-2',
-                'description'   => __('Widgets in this bar will appear in footer sidebar No. 2', 'wp_hub'),
+                'description'   => 'Widgets in this bar will appear in footer sidebar No. 2',
             ],
             [
-                'name'          => __('Footer Bar 3', 'wp_hub'),
+                'name'          => 'Footer Bar 3',
                 'id'            => 'footerbar-3',
-                'description'   => __('Widgets in this bar will appear in footer sidebar No. 3', 'wp_hub'),
+                'description'   => 'Widgets in this bar will appear in footer sidebar No. 3',
             ],
             [
-                'name'          => __('Footer Bar 4', 'wp_hub'),
+                'name'          => 'Footer Bar 4',
                 'id'            => 'footerbar-4',
-                'description'   => __('Widgets in this bar will appear in footer sidebar No. 4', 'wp_hub'),
+                'description'   => 'Widgets in this bar will appear in footer sidebar No. 4',
             ],
             [
-                'name'          => __('Footer Bar 5', 'wp_hub'),
+                'name'          => 'Footer Bar 5',
                 'id'            => 'footerbar-5',
-                'description'   => __('Widgets in this bar will appear in footer sidebar No. 5', 'wp_hub'),
+                'description'   => 'Widgets in this bar will appear in footer sidebar No. 5',
             ],
         ];
 
