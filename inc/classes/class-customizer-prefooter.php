@@ -12,7 +12,7 @@ use HUB_WP\Inc\Traits\Singleton as TraitsSingleton;
 use WP_Customize_Color_Control;
 use WP_Customize_Control;
 
-class Customizer_Header
+class Customizer_Prefooter
 {
     use TraitsSingleton;
 
@@ -83,6 +83,7 @@ class Customizer_Header
     {
         $this->register_prefooter_display_customization($wp_customize);
         $this->register_prefooter_bg_color_customization($wp_customize);
+        $this->register_prefooter_paddings_customization($wp_customize);
     }
     public function register_prefooter_display_customization($wp_customize)
     {
@@ -119,5 +120,21 @@ class Customizer_Header
                 'settings' => 'prefooter-bg-color-setting',
             )
         ));
+    }
+    public function register_prefooter_paddings_customization($wp_customize)
+    {
+        // Paddings Setting
+        $wp_customize->add_setting('prefooter-paddings-setting', [
+            'default' => '0',
+            'capability' => 'edit_theme_options',
+            // 'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Paddings Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'prefooter-paddings-control', [
+            'label' => __("Paddings Top Bottom (rem)", 'wp_hub'),
+            'section' => 'prefooter-section',
+            'settings' => 'prefooter-paddings-setting',
+            'type' => 'number',
+        ]));
     }
 }
