@@ -688,6 +688,12 @@ label.hamburger > i:after {
   opacity: 0.5;
 }
 
+#pre-footer {
+  background-color: #151515;
+  color: white;
+  padding: 10rem;
+}
+
 * {
   margin: 0;
   padding: 0;
