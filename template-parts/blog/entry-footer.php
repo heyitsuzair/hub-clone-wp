@@ -22,5 +22,18 @@ if (is_home()) {
     </div>
 </div>
 <?php
+} elseif (is_single()) {
+
+
+?>
+<div class="container my-5">
+    <?php comment_form([
+            'class_container' => 'comment-container',
+            'class_form' => 'comment-form row',
+            'label_submit' => __('Submit', 'wp_hub'),
+            'title_reply' => 'Leave A Comment',
+        ]); ?>
+</div>
+<?php
 }
 ?>

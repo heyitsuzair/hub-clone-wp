@@ -636,6 +636,52 @@ label.hamburger > i:after {
   transform: rotate(-90deg) translateX(-5rem);
 }
 
+.comment-container {
+  margin-top: 10rem;
+}
+.comment-container .comment-form .comment-form-comment {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+}
+.comment-container .comment-form .comment-form-author input, .comment-container .comment-form .comment-form-email input, .comment-container .comment-form .comment-form-url input, .comment-container .comment-form .comment-form-comment input {
+  border: none;
+  padding: 1rem 0;
+  background: transparent;
+  line-height: 1.5em;
+  border-bottom: 2px solid #d3d3d3;
+  transition: 0.4s all ease;
+}
+.comment-container .comment-form .comment-form-author input:focus, .comment-container .comment-form .comment-form-email input:focus, .comment-container .comment-form .comment-form-url input:focus, .comment-container .comment-form .comment-form-comment input:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.comment-container .comment-form .comment-form-author textarea, .comment-container .comment-form .comment-form-email textarea, .comment-container .comment-form .comment-form-url textarea, .comment-container .comment-form .comment-form-comment textarea {
+  border: none;
+  padding: 1rem 0;
+  background: transparent;
+  line-height: 1.5em;
+  border-bottom: 2px solid #d3d3d3;
+  transition: 0.4s all ease;
+}
+.comment-container .comment-form .comment-form-author textarea:focus, .comment-container .comment-form .comment-form-email textarea:focus, .comment-container .comment-form .comment-form-url textarea:focus, .comment-container .comment-form .comment-form-comment textarea:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+.comment-container .comment-form .comment-form-cookies-consent {
+  order: 3;
+}
+.comment-container .comment-form .form-submit {
+  order: 2;
+  margin-top: 1rem;
+}
+.comment-container .comment-form .form-submit input {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5rem 2.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -48,7 +48,8 @@ if (is_home()) {
                         <span>Facebook</span>
                     </a>
                     <a class="td-none social-link twitter" href="<?php echo esc_url('
-http://twitter.com/share?text=Checkout This Amazing Blog!&url=' .  $url) ?>" target="_blank">
+                            http://twitter.com/share?text=Checkout This Amazing Blog!&url=' .  $url) ?>"
+                        target="_blank">
                         <i class="fa fa-brands fa-twitter" aria-hidden="true"></i>
                         <span>Twitter</span>
                     </a>
@@ -73,6 +74,7 @@ http://twitter.com/share?text=Checkout This Amazing Blog!&url=' .  $url) ?>" tar
             </div>
         </div>
     </div>
+
 </section>
 <?php
 }
