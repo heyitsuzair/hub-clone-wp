@@ -8,7 +8,8 @@
 ?>
 
 <footer id="pre-footer" class="pre-footer-hub">
-    <div class="pre-footer-content container d-flex flex-lg-row gap-3 justify-content-around align-items-center">
+    <div
+        class="pre-footer-content container d-flex flex-lg-row flex-md-row flex-sm-column gap-4 justify-content-around align-items-center">
 
         <!--------------------- Check If Any Sidebar Is Active --------------------->
 
