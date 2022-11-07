@@ -34,29 +34,47 @@ class Customizer_Styles
 
     public function register_head_styles()
     {
-        $prefooter_bg_color = get_theme_mod('prefooter-bg-color-setting');
-        $prefooter_paddings = get_theme_mod('prefooter-paddings-setting');
+        /**
+         * $prefooter_bg_color Check If BG Color Value Is Empty Set The Default Background Color
+         */
+        $prefooter_bg_color = get_theme_mod('prefooter-bg-color-setting') == '' ? '#151515' : get_theme_mod('prefooter-bg-color-setting');
+
+        /**
+         * $prefooter_paddings Check If Padding Value Is Empty Set The Default Padding
+         */
+        $prefooter_paddings = get_theme_mod('prefooter-paddings-setting') == '' ? '3rem' : get_theme_mod('prefooter-paddings-setting') . 'rem';
+
         $prefooter_display_seperators = get_theme_mod('prefooter-seperator-display-setting');
         $prefooter_seperators_width = get_theme_mod('prefooter-seperator-width-setting');
-        $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting');
+
+        /**
+         * $prefooter_seperators_color Check If Seperator Color Value Is Empty Set The Default Seperator Color
+         */
+        $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting') == '' ? '#ffffff12' : get_theme_mod('prefooter-seperator-color-setting');
 
 ?>
-<!--------------------------------------------------- Styling --------------------------------------------------->
+<!-------------------------------------------------- Styling -------------------------------------------------->
 
 <style>
 #pre-footer {
-    background-color: <?php echo $prefooter_bg_color==''? '#151515': $prefooter_bg_color ?>;
+    background-color: <?php echo $prefooter_bg_color ?>;
 }
 
 .pre-footer-content {
-    padding: <?php echo $prefooter_paddings==''? '3rem': $prefooter_paddings . 'rem'?> 0;
-    border-top: <?php echo $prefooter_display_seperators ? $prefooter_seperators_width . 'px': '0px'?> solid <?php echo $prefooter_seperators_color==''? '#ffffff12': $prefooter_seperators_color ?>;
-    border-bottom: <?php echo $prefooter_display_seperators ? $prefooter_seperators_width . 'px': '0px'?> solid <?php echo $prefooter_seperators_color==''? '#ffffff12': $prefooter_seperators_color ?>;
+    padding: <?php echo $prefooter_paddings ?> 0;
+    /*
+    * First Check If The Seperators Are Enabled From Customizer Or Not, If Not Than Make Seperatos Width To 0px Else Put Its Original Width Coming From Customizer
+    */
+    border-top: <?php echo $prefooter_display_seperators ? $prefooter_seperators_width . 'px': '0px'?> solid <?php echo $prefooter_seperators_color ?>;
+    /*
+    * First Check If The Seperators Are Enabled From Customizer Or Not, If Not Than Make Seperatos Width To 0px Else Put Its Original Width Coming From Customizer
+    */
+    border-bottom: <?php echo $prefooter_display_seperators ? $prefooter_seperators_width . 'px': '0px'?> solid <?php echo $prefooter_seperators_color ?>;
 }
 </style>
 
 
-<!--------------------------------------------------- Styling --------------------------------------------------->
+<!-------------------------------------------------- Styling -------------------------------------------------->
 <?php
     }
 }
