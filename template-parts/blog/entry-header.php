@@ -48,7 +48,7 @@ if (is_home()) {
         <div class="left d-flex flex-row gap-3 align-items-center">
             <span class="fw-600"><?php echo get_the_date('F j, Y'); ?></span>
             <span class="dot"></span>
-            <span class="fw-600">Muhammad Uzair</span>
+            <span class="fw-600"><?php the_author(); ?></span>
         </div>
         <div class="text-dark fw-600">
             <?php echo estimate_reading_time_in_minutes(get_the_content()); ?> Min Read

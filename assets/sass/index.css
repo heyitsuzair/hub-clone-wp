@@ -688,6 +688,37 @@ label.hamburger > i:after {
   opacity: 0.5;
 }
 
+#pre-footer {
+  background-color: #151515;
+  color: white;
+  padding: 3rem 0;
+}
+#pre-footer .pre-footer-content {
+  padding: 5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+@media (max-width: 576px) {
+  #pre-footer .pre-footer-content {
+    flex-direction: column;
+  }
+}
+
+#main-footer {
+  background-color: #151515;
+  color: white;
+  padding: 2rem 0;
+  margin: -0.2rem;
+}
+@media (max-width: 576px) {
+  #main-footer .footer-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;

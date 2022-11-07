@@ -26,7 +26,7 @@ if (is_home()) {
 
 
 ?>
-<div class="container my-5">
+<div class="container mt-5">
     <?php comment_form([
             'class_container' => 'comment-container',
             'class_form' => 'comment-form row',

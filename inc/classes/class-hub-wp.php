@@ -25,5 +25,6 @@ class HUB_WP
         Nav_Menus::get_instance();
         Theme_Support::get_instance();
         Comment_Form::get_instance();
+        Register_Sidebars::get_instance();
     }
 }
