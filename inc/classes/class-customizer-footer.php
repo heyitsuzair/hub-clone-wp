@@ -87,13 +87,15 @@ class Customizer_Footer
         $this->register_footer_text_color_customization($wp_customize);
         $this->register_footer_paddings_customization($wp_customize);
         $this->register_footer_leftcol_customization($wp_customize);
+        $this->register_footer_leftcol_display_customization($wp_customize);
         $this->register_footer_rightcol_customization($wp_customize);
+        $this->register_footer_rightcol_display_customization($wp_customize);
     }
     public function register_footer_display_customization($wp_customize)
     {
         // Display Setting
         $wp_customize->add_setting('footer-display-setting', [
-            'default' => false,
+            'default' => 0,
             'capability' => 'edit_theme_options',
             'sanitize_callback' => [$this, 'sanitize_checkbox'],
         ]);
@@ -161,12 +163,12 @@ class Customizer_Footer
     }
     public function register_footer_leftcol_customization($wp_customize)
     {
-        // Left Columns Setting
+        // Left Column Text Setting
         $wp_customize->add_setting('footer-leftcol-text-setting', [
             'default' => 'Copyright © 2022 Muhammad Uzair',
             'sanitize_callback' => [$this, 'sanitize_custom_textarea']
         ]);
-        // Left Columns Control
+        // Left Column Text Control
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-leftcol-text-control', [
             'label' => "Left Column Text",
             'section' => 'footer-section',
@@ -176,17 +178,49 @@ class Customizer_Footer
     }
     public function register_footer_rightcol_customization($wp_customize)
     {
-        // Right Columns Setting
+        // Right Column Text Setting
         $wp_customize->add_setting('footer-rightcol-text-setting', [
             'default' => 'All Rights Reserved',
             'sanitize_callback' => [$this, 'sanitize_custom_textarea']
         ]);
-        // Right Columns Control
+        // Right Column Text Control
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-rightcol-text-control', [
             'label' => "Right Column Text",
             'section' => 'footer-section',
             'settings' => 'footer-rightcol-text-setting',
             'type' => 'textarea',
+        ]));
+    }
+    public function register_footer_leftcol_display_customization($wp_customize)
+    {
+        // Left Column Display Setting
+        $wp_customize->add_setting('footer-leftcol-display-setting', [
+            'default' => 1,
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_checkbox'],
+        ]);
+        // Left Column Display Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-leftcol-display-control', [
+            'label' => __("Display Left Column?", 'wp_hub'),
+            'section' => 'footer-section',
+            'settings' => 'footer-leftcol-display-setting',
+            'type' => 'checkbox',
+        ]));
+    }
+    public function register_footer_rightcol_display_customization($wp_customize)
+    {
+        // Right Column Display Setting
+        $wp_customize->add_setting('footer-rightcol-display-setting', [
+            'default' => 1,
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_checkbox'],
+        ]);
+        // Right Column Display Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'footer-rightcol-display-control', [
+            'label' => __("Display Right Column?", 'wp_hub'),
+            'section' => 'footer-section',
+            'settings' => 'footer-rightcol-display-setting',
+            'type' => 'checkbox',
         ]));
     }
 }
