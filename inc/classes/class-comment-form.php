@@ -46,17 +46,17 @@ class Comment_Form
         $fields['author'] = '<p class="comment-form-author col-lg-4 d-flex flex-column">' .
             // '<label for="author">' . __('Name') . '</label>' .
             '<input id="author" name="author" type="text" value="' . esc_attr($commenter['comment_author']) .
-            '" size="30" tabindex="1"' . $aria_req . ' placeholder=' . __('Name') . ' /></p>';
+            '" size="30" tabindex="1"' . $aria_req . ' placeholder=' . __('Name') . ' required /></p>';
 
         $fields['email'] = '<p class="comment-form-email col-lg-4 d-flex flex-column">' .
             // '<label for="email">' . __('Email') . '</label>' .
             '<input id="email" name="email" type="text" value="' . esc_attr($commenter['comment_author_email']) .
-            '" size="30"  tabindex="2"' . $aria_req . ' placeholder=' . __('Email') . ' /></p>';
+            '" size="30"  tabindex="2"' . $aria_req . ' placeholder=' . __('Email') . ' required /></p>';
 
         $fields['url'] = '<p class="comment-form-url col-lg-4 d-flex flex-column">' .
             // '<label for="url">' . __('Website') . '</label>' .
             '<input id="url" name="url" type="text" value="' . esc_attr($commenter['comment_author_url']) .
-            '" size="30"  tabindex="3" placeholder=' . __('Website') . ' /></p>';
+            '" size="30"  tabindex="3" placeholder=' . __('Website') . ' required /></p>';
 
         return $fields;
     }

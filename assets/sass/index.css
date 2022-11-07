@@ -681,6 +681,11 @@ label.hamburger > i:after {
   color: white;
   border-radius: 5px;
   padding: 0.5rem 2.5rem;
+  transition: 0.5s all;
+  opacity: 1;
+}
+.comment-container .comment-form .form-submit input.submit-disabled {
+  opacity: 0.5;
 }
 
 * {

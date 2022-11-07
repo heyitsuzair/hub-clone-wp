@@ -45,6 +45,11 @@
                 color: white;
                 border-radius: 5px;
                 padding: .5rem 2.5rem;
+                transition: .5s all;
+                opacity: 1;
+                &.submit-disabled{
+                    opacity: .5;
+                }
             }
         }
     }

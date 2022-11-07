@@ -19,15 +19,37 @@
     // offset: 100,
   });
 
-  const commentField = $(".comment-form-comment");
+  const commentForm = $(".comment-form-comment");
+  const submit = $("#submit");
+  const commentField = $("#comment");
+
+  // Disable Submit Button By Default -------------------->
+  $(submit)[0].setAttribute("disabled", "true");
+  $(submit)[0].setAttribute("class", "submit submit-disabled");
+  // Disable Submit Button By Default -------------------->
+
   // Removing Label From Comment Form Comment Field ----------------------->
-  $(commentField)[0].children[0].remove();
+  $(commentForm)[0].children[0].remove();
   // Removing Label From Comment Form Comment Field ----------------------->
 
   // Now The Field Became First Child So We Can Set Its Placeholder By setAttribute Function --------------->
-  $(commentField)[0].children[0].setAttribute(
+  $(commentField)[0].setAttribute(
     "placeholder",
     "Your Feedback Will Be Appreciated!"
   );
   // Now The Field Became First Child So We Can Set Its Placeholder By setAttribute Function --------------->
+
+  // Listen To On Keyup Event In Comment Textarea -------------------------->
+  $(commentField).on("keyup", (e) => {
+    // If the value of comment field is empty, prevent user from submitting form by disabling submit button ------------>
+    if (e.target.value !== "") {
+      $(submit)[0].removeAttribute("disabled");
+      $(submit)[0].setAttribute("class", "submit");
+    } else {
+      $(submit)[0].setAttribute("disabled", "true");
+      $(submit)[0].setAttribute("class", "submit submit-disabled");
+    }
+    // If the value of comment field is empty, prevent user from submitting form by disabling submit button ------------>
+  });
+  // Listen To On Keyup Event In Comment Textarea -------------------------->
 })(jQuery);
