@@ -56,6 +56,10 @@ class Customizer_Prefooter
     {
         return sanitize_hex_color($input);
     }
+    public function sanitize_number($input)
+    {
+        return filter_var($input, FILTER_SANITIZE_NUMBER_INT);
+    }
     /**
      * Sanitization ------------------------------
      */
@@ -84,6 +88,8 @@ class Customizer_Prefooter
         $this->register_prefooter_display_customization($wp_customize);
         $this->register_prefooter_bg_color_customization($wp_customize);
         $this->register_prefooter_paddings_customization($wp_customize);
+        $this->register_prefooter_display_seperators_customization($wp_customize);
+        $this->register_prefooter_seperators_width_customization($wp_customize);
     }
     public function register_prefooter_display_customization($wp_customize)
     {
@@ -125,15 +131,48 @@ class Customizer_Prefooter
     {
         // Paddings Setting
         $wp_customize->add_setting('prefooter-paddings-setting', [
-            'default' => '0',
+            'default' => 0,
             'capability' => 'edit_theme_options',
-            // 'sanitize_callback' => [$this, 'sanitize_hex_color'],
+            'sanitize_callback' => [$this, 'sanitize_number'],
         ]);
         // Paddings Control
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'prefooter-paddings-control', [
             'label' => __("Paddings Top Bottom (rem)", 'wp_hub'),
             'section' => 'prefooter-section',
             'settings' => 'prefooter-paddings-setting',
+            'type' => 'number',
+        ]));
+    }
+    public function register_prefooter_display_seperators_customization($wp_customize)
+    {
+        // Seperators Display Setting
+        $wp_customize->add_setting('prefooter-seperator-display-setting', [
+            'default' => true,
+            'type'       => 'option',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_checkbox'],
+        ]);
+        // Seperators Display Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'prefooter-seperator-display-control', [
+            'label' => __("Display Seperators?", 'wp_hub'),
+            'section' => 'prefooter-section',
+            'settings' => 'prefooter-seperator-display-setting',
+            'type' => 'checkbox',
+        ]));
+    }
+    public function register_prefooter_seperators_width_customization($wp_customize)
+    {
+        // Seperator Width Setting
+        $wp_customize->add_setting('prefooter-seperator-width-setting', [
+            'default' => 0,
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_number'],
+        ]);
+        // Seperator Width Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'prefooter-seperator-width-control', [
+            'label' => __("Seperator Width (px)", 'wp_hub'),
+            'section' => 'prefooter-section',
+            'settings' => 'prefooter-seperator-width-setting',
             'type' => 'number',
         ]));
     }
