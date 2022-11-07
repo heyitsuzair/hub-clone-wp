@@ -28,5 +28,6 @@ class HUB_WP
         Register_Sidebars::get_instance();
         Customizer_Prefooter::get_instance();
         Customizer_Styles::get_instance();
+        Customizer_Footer::get_instance();
     }
 }

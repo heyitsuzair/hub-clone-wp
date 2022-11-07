@@ -36,10 +36,6 @@ class Customizer_Prefooter
     /**
      * Sanitization ------------------------------
      */
-    public function sanitize_custom_option($input)
-    {
-        return ($input == 'No') ? 'No' : 'Yes';
-    }
     public function sanitize_custom_textarea($input)
     {
         return sanitize_textarea_field($input);
@@ -102,7 +98,7 @@ class Customizer_Prefooter
         ]);
         // Display Control
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'prefooter-display-control', [
-            'label' => __("Display Prefooter Footer?", 'wp_hub'),
+            'label' => __("Display Prefooter?", 'wp_hub'),
             'section' => 'prefooter-section',
             'settings' => 'prefooter-display-setting',
             'type' => 'checkbox',
