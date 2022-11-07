@@ -90,6 +90,7 @@ class Customizer_Prefooter
         $this->register_prefooter_paddings_customization($wp_customize);
         $this->register_prefooter_display_seperators_customization($wp_customize);
         $this->register_prefooter_seperators_width_customization($wp_customize);
+        $this->register_prefooter_seperators_color_customization($wp_customize);
     }
     public function register_prefooter_display_customization($wp_customize)
     {
@@ -175,5 +176,24 @@ class Customizer_Prefooter
             'settings' => 'prefooter-seperator-width-setting',
             'type' => 'number',
         ]));
+    }
+    public function register_prefooter_seperators_color_customization($wp_customize)
+    {
+        // Seperator Color Setting
+        $wp_customize->add_setting('prefooter-seperator-color-setting', [
+            'default' => '#ffffff12',
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Seperator Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'prefooter-seperator-color-control',
+            array(
+                'label'    => __('Seperator Color', 'wp_hub'),
+                'section'  => 'prefooter-section',
+                'settings' => 'prefooter-seperator-color-setting',
+            )
+        ));
     }
 }
