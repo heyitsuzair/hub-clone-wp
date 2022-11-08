@@ -29,5 +29,6 @@ class HUB_WP
         Customizer_Prefooter::get_instance();
         Customizer_Styles::get_instance();
         Customizer_Footer::get_instance();
+        Customizer_Single_Blog::get_instance();
     }
 }
