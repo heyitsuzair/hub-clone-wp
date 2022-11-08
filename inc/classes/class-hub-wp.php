@@ -31,5 +31,6 @@ class HUB_WP
         Customizer_Footer::get_instance();
         Customizer_Single_Blog::get_instance();
         Customizer_Header::get_instance();
+        Register_Metaboxes::get_instance();
     }
 }
