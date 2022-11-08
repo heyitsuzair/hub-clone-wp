@@ -119,16 +119,20 @@ class Customizer_Single_Blog
     {
         // Right Panel Text Setting
         $wp_customize->add_setting('post-right-panel-text-setting', [
-            'default' => 'contact@hub.com',
+            'default' => __('contact@hub.com', 'wp_hub'),
             'sanitize_callback' => [$this, 'sanitize_custom_text']
         ]);
 
         // Right Panel Text Control
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'post-right-panel-text-control', [
-            'label' => "Right Panel Text",
+            'label' => __("Right Panel Text", 'wp_hub'),
             'section' => 'post-section',
             'settings' => 'post-right-panel-text-setting',
             'type' => 'text',
         ]));
+    }
+
+    public function register_full_width_content_customization()
+    {
     }
 }

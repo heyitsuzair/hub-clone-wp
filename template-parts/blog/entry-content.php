@@ -23,6 +23,18 @@ $getUser_name = get_userdata($get_AuthorId);
 $post_author = $getUser_name->user_login;
 // Getting Username For Single Blog Page --------------------------->
 
+// Get Left Panel Display Setting --------------------------------->
+$left_panel_display = get_theme_mod('post-left-panel-setting');
+// Get Left Panel Display Setting --------------------------------->
+
+// Get Right Panel Display Setting --------------------------------->
+$right_panel_display = get_theme_mod('post-right-panel-setting');
+// Get Right Panel Display Setting --------------------------------->
+
+// Get Right Panel Text Setting --------------------------------->
+$right_panel_text = get_theme_mod('post-right-panel-text-setting') == '' ? 'contact@hub.com' : get_theme_mod('post-right-panel-text-setting');
+// Get Right Panel Text Setting --------------------------------->
+
 ?>
 
 <?php
@@ -40,6 +52,9 @@ if (is_home()) {
 ?>
 <section class="single-blog-content single-<?php the_ID() ?>-content">
     <div class="row">
+        <?php
+            if ($left_panel_display) :
+            ?>
         <div class="col-lg-2 d-sm-none d-md-none d-lg-block content-left single-<?php the_ID() ?>-content-left">
             <div class="d-flex flex-column content-left-author text-center gap-5 mx-5 pt-5">
                 <div class="author-info">
@@ -51,6 +66,7 @@ if (is_home()) {
                         <span><?php echo $post_author ?></span>
                     </div>
                 </div>
+
                 <div class="text-start d-flex flex-column gap-4 socials <?php the_ID() ?>-socials">
                     <a class="td-none social-link fb"
                         href="<?php echo esc_url('https://www.facebook.com/sharer/sharer.php?u=' .  $url) ?>"
@@ -73,17 +89,24 @@ if (is_home()) {
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <div class="col-lg-8 col-sm-12 col-md-12 px-5 text-center">
             <h4 class="text-start my-5 single-blog-moto fst-italic">Success Needs Hardwork</h4>
             <p><?php the_content(); ?></p>
         </div>
+        <?php
+            if ($right_panel_display) :
+            ?>
         <div class="col-lg-2 d-sm-none d-md-none d-lg-block content-right single-<?php the_ID() ?>-content-right">
             <div class="d-flex flex-column content-right-author text-center gap-5 mx-5 pt-5">
                 <div class="contact">
-                    <span>contact@hub.com</span>
+                    <span><?php echo $right_panel_text; ?></span>
                 </div>
             </div>
         </div>
+        <?php
+            endif;
+            ?>
     </div>
 
 </section>
