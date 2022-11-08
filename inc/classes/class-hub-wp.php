@@ -30,5 +30,6 @@ class HUB_WP
         Customizer_Styles::get_instance();
         Customizer_Footer::get_instance();
         Customizer_Single_Blog::get_instance();
+        Customizer_Header::get_instance();
     }
 }
