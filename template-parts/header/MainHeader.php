@@ -17,7 +17,7 @@
         <?php
         } else {
         ?>
-        <a href="<?php echo esc_attr(home_url()); ?>" class="td-none text-black">
+        <a href="<?php echo esc_url(home_url()); ?>" class="td-none" id="site_title">
             <h4> <?php echo get_bloginfo('name'); ?> </h4>
         </a>
         <?php

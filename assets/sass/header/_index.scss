@@ -1,5 +1,4 @@
 #master-header{
-    background-color: $color_gray;
     .header{
         .header-right{
             .header-inner{
@@ -10,7 +9,6 @@
                         color: black;
                         padding: .5rem 0;
                         text-align: center;
-                        background-color: $color_gray
                     }
                    .menu-item-has-children {
                     @include flex(center,center,column);

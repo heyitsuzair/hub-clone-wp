@@ -57,6 +57,11 @@ class Customizer_Styles
         $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting') == '' ? '#ffffff12' : get_theme_mod('prefooter-seperator-color-setting');
         $post_moral_color = get_theme_mod('post-moral-color-setting') == '' ? '#737373' : get_theme_mod('post-moral-color-setting');
         $post_content_color = get_theme_mod('post-content-color-setting') == '' ? '#212529' : get_theme_mod('post-content-color-setting');
+        $header_bg_color = get_theme_mod('header-bg-color-setting') == '' ? '#f6f6f6' : get_theme_mod('header-bg-color-setting');
+        $brand_color = get_theme_mod('brand-color-setting') == '' ? '#000000' : get_theme_mod('brand-color-setting');
+        $brand_hover_color = get_theme_mod('brand-hover-color-setting') == '' ? '#000000' : get_theme_mod('brand-hover-color-setting');
+        $hamburger_color = get_theme_mod('hamburger-color-setting') == '' ? '#000000' : get_theme_mod('hamburger-color-setting');
+        $drawer_bg_color = get_theme_mod('drawer-bg-color-setting') == '' ? '#f6f6f6' : get_theme_mod('drawer-bg-color-setting');
 
         /**
          * Check If Left Panel Of Single Blog Is Disabled And Right Is Enabled Than Modify Right Panel CSS
@@ -115,6 +120,29 @@ class Customizer_Styles
 
 .single-blog .single-blog-content {
     color: <?php echo $post_content_color ?>;
+}
+
+#master-header {
+    background-color: <?php echo $header_bg_color ?>;
+}
+
+#site_title {
+    color: <?php echo $brand_color ?>;
+}
+
+#site_title:hover {
+    color: <?php echo $brand_hover_color ?>;
+}
+
+label.hamburger>i,
+label.hamburger>i::before,
+label.hamburger>i::after {
+    background-color: <?php echo $hamburger_color;
+    ?>;
+}
+
+.drawer-list {
+    background-color: <?php echo $drawer_bg_color ?>;
 }
 </style>
 

@@ -83,6 +83,11 @@ class Customizer_Header
     public function register_customizations($wp_customize)
     {
         $this->register_header_display_customization($wp_customize);
+        $this->register_header_color_customization($wp_customize);
+        $this->register_title_color_customization($wp_customize);
+        $this->register_title_hover_color_customization($wp_customize);
+        $this->register_hamburger_color_customization($wp_customize);
+        $this->register_drawer_bg_color_customization($wp_customize);
     }
     public function register_header_display_customization($wp_customize)
     {
@@ -99,5 +104,100 @@ class Customizer_Header
             'settings' => 'header-display-setting',
             'type' => 'checkbox',
         ]));
+    }
+    public function register_header_color_customization($wp_customize)
+    {
+        // Background Color Setting
+        $wp_customize->add_setting('header-bg-color-setting', [
+            'default' => '#f6f6f6',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Background Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'header-bg-color-control',
+            array(
+                'label'    => __('Background Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'header-bg-color-setting',
+            )
+        ));
+    }
+    public function register_title_color_customization($wp_customize)
+    {
+        // Title Color Setting
+        $wp_customize->add_setting('brand-color-setting', [
+            'default' => '#000000',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Title Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'brand-color-control',
+            array(
+                'label'    => __('Title Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'brand-color-setting',
+            )
+        ));
+    }
+    public function register_title_hover_color_customization($wp_customize)
+    {
+        // Title Hover Color Setting
+        $wp_customize->add_setting('brand-hover-color-setting', [
+            'default' => '#000000',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Title Hover Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'brand-hover-color-control',
+            array(
+                'label'    => __('Title Color On Hover', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'brand-hover-color-setting',
+            )
+        ));
+    }
+    public function register_hamburger_color_customization($wp_customize)
+    {
+        // Hamburger Color Setting
+        $wp_customize->add_setting('hamburger-color-setting', [
+            'default' => '#000000',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Hamburger Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'hamburger-color-control',
+            array(
+                'label'    => __('Hamburger Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'hamburger-color-setting',
+            )
+        ));
+    }
+    public function register_drawer_bg_color_customization($wp_customize)
+    {
+        // Drawer BG Color Setting
+        $wp_customize->add_setting('drawer-bg-color-setting', [
+            'default' => '#f6f6f6',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Drawer BG Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'drawer-bg-color-control',
+            array(
+                'label'    => __('Drawer Background Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'drawer-bg-color-setting',
+            )
+        ));
     }
 }
