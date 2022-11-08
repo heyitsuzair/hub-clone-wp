@@ -12,6 +12,10 @@ $get_AuthorId = $post->post_author;
 $getUser_name = get_userdata($get_AuthorId);
 $post_author = $getUser_name->user_login;
 // Getting Username For Single Blog Page --------------------------->
+
+// Get Meta Display Setting --------------------------------->
+$meta_display = get_theme_mod('post-meta-display-setting');
+// Get Meta Display Setting --------------------------------->
 ?>
 
 <?php
@@ -49,6 +53,9 @@ if (is_home()) {
         </div>
     </div>
     <div class="publish d-flex align-items-center flex-lg-row flex-md-row flex-sm-row justify-content-between gap-3">
+        <?php
+            if ($meta_display) :
+            ?>
         <div class="left d-flex flex-row gap-3 align-items-center">
             <span class="fw-600"><?php echo get_the_date('F j, Y'); ?></span>
             <span class="dot"></span>
@@ -57,6 +64,9 @@ if (is_home()) {
         <div class="text-dark fw-600">
             <?php echo estimate_reading_time_in_minutes(get_the_content()); ?> Min Read
         </div>
+        <?php
+            endif;
+            ?>
     </div>
 </section>
 <?php

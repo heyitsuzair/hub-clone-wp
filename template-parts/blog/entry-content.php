@@ -35,7 +35,6 @@ $right_panel_display = get_theme_mod('post-right-panel-setting');
 $right_panel_text = get_theme_mod('post-right-panel-text-setting') == '' ? 'contact@hub.com' : get_theme_mod('post-right-panel-text-setting');
 // Get Right Panel Text Setting --------------------------------->
 
-
 // Check If The Left And Right Panel Is Enabled Or Not, If Enabled Than Set $full_width_column Accordingly
 $full_width_column = '12';
 if ($left_panel_display == true || $right_panel_display == true)
@@ -71,7 +70,6 @@ if (is_home()) {
                         alt="<?php echo $post_author ?>">
 
                     <div class="author-name">
-
                         <span><?php echo $post_author ?></span>
                     </div>
                 </div>

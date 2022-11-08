@@ -85,6 +85,7 @@ class Customizer_Single_Blog
         $this->register_right_panel_text_customization($wp_customize);
         $this->register_content_color_customization($wp_customize);
         $this->register_moral_color_customization($wp_customize);
+        $this->register_meta_display_customization($wp_customize);
     }
     public function register_left_panel_customization($wp_customize)
     {
@@ -171,5 +172,21 @@ class Customizer_Single_Blog
                 'settings' => 'post-moral-color-setting',
             )
         ));
+    }
+    public function register_meta_display_customization($wp_customize)
+    {
+        // Meta Display Setting
+        $wp_customize->add_setting('post-meta-display-setting', [
+            'default' => 1,
+            'capability' => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_checkbox'],
+        ]);
+        // Meta Display Control
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'post-meta-display-control', [
+            'label' => __("Enable Meta Info", 'wp_hub'),
+            'section' => 'post-section',
+            'settings' => 'post-meta-display-setting',
+            'type' => 'checkbox',
+        ]));
     }
 }
