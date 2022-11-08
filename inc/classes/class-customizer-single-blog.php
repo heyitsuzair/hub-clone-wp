@@ -131,8 +131,4 @@ class Customizer_Single_Blog
             'type' => 'text',
         ]));
     }
-
-    public function register_full_width_content_customization()
-    {
-    }
 }

@@ -35,6 +35,14 @@ $right_panel_display = get_theme_mod('post-right-panel-setting');
 $right_panel_text = get_theme_mod('post-right-panel-text-setting') == '' ? 'contact@hub.com' : get_theme_mod('post-right-panel-text-setting');
 // Get Right Panel Text Setting --------------------------------->
 
+
+// Check If The Left And Right Panel Is Enabled Or Not, If Enabled Than Set $full_width_column Accordingly
+$full_width_column = '12';
+if ($left_panel_display == true || $right_panel_display == true)
+    $full_width_column = '10';
+if ($left_panel_display == true && $right_panel_display == true)
+    $full_width_column = '8';
+
 ?>
 
 <?php
@@ -90,7 +98,7 @@ if (is_home()) {
             </div>
         </div>
         <?php endif; ?>
-        <div class="col-lg-8 col-sm-12 col-md-12 px-5 text-center">
+        <div class="col-lg-<?php echo $full_width_column ?> col-sm-12 col-md-12 px-5 text-center">
             <h4 class="text-start my-5 single-blog-moto fst-italic">Success Needs Hardwork</h4>
             <p><?php the_content(); ?></p>
         </div>

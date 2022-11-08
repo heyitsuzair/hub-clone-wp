@@ -56,6 +56,22 @@ class Customizer_Styles
          */
         $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting') == '' ? '#ffffff12' : get_theme_mod('prefooter-seperator-color-setting');
 
+        /**
+         * Check If Left Panel Of Single Blog Is Disabled And Right Is Enabled Than Modify Right Panel CSS
+         */
+
+        // Get Left Panel Display Setting --------------------------------->
+        $left_panel_display = get_theme_mod('post-left-panel-setting');
+        // Get Left Panel Display Setting --------------------------------->
+
+        // Get Right Panel Display Setting --------------------------------->
+        $right_panel_display = get_theme_mod('post-right-panel-setting');
+        // Get Right Panel Display Setting --------------------------------->
+
+        $is_right_enabled = $left_panel_display == false && $right_panel_display == true ? true : false;
+
+
+
         // <---------------------------------------- ! ------------------------------------------->
         $prefooter_display_seperators = get_theme_mod('prefooter-seperator-display-setting');
         $prefooter_seperators_width = get_theme_mod('prefooter-seperator-width-setting');
@@ -85,6 +101,10 @@ class Customizer_Styles
     background-color: <?php echo $footer_bg_color ?>;
     color: <?php echo $footer_text_color ?>;
     padding: <?php echo $footer_paddings ?> 0;
+}
+
+.single-blog .single-blog-content .content-right {
+    transform: translateX(<?php echo $is_right_enabled ? 0 : ""?>rem);
 }
 </style>
 
