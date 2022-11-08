@@ -88,6 +88,8 @@ class Customizer_Header
         $this->register_title_hover_color_customization($wp_customize);
         $this->register_hamburger_color_customization($wp_customize);
         $this->register_drawer_bg_color_customization($wp_customize);
+        $this->register_drawer_menu_color_customization($wp_customize);
+        $this->register_drawer_menu_hover_color_customization($wp_customize);
     }
     public function register_header_display_customization($wp_customize)
     {
@@ -197,6 +199,44 @@ class Customizer_Header
                 'label'    => __('Drawer Background Color', 'wp_hub'),
                 'section'  => 'header-section',
                 'settings' => 'drawer-bg-color-setting',
+            )
+        ));
+    }
+    public function register_drawer_menu_color_customization($wp_customize)
+    {
+        // Drawer Menu Color Setting
+        $wp_customize->add_setting('drawer-menu-color-setting', [
+            'default' => '#000000',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Drawer Menu Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'drawer-menu-color-control',
+            array(
+                'label'    => __('Drawer Menu Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'drawer-menu-color-setting',
+            )
+        ));
+    }
+    public function register_drawer_menu_hover_color_customization($wp_customize)
+    {
+        // Drawer Menu Hover Color Setting
+        $wp_customize->add_setting('drawer-menu-hover-color-setting', [
+            'default' => '#000000',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Drawer Menu Hover Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'drawer-menu-hover-color-control',
+            array(
+                'label'    => __('Drawer Menu Hover Color', 'wp_hub'),
+                'section'  => 'header-section',
+                'settings' => 'drawer-menu-hover-color-setting',
             )
         ));
     }

@@ -6,9 +6,9 @@
                     text-align: center;
                     a{
                         text-decoration: $td_none;
-                        color: black;
                         padding: .5rem 0;
                         text-align: center;
+                        background-color: transparent;
                     }
                    .menu-item-has-children {
                     @include flex(center,center,column);

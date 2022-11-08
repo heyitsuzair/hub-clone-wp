@@ -24,9 +24,9 @@
 }
 #master-header .header .header-right .header-inner .menu-item a {
   text-decoration: none;
-  color: black;
   padding: 0.5rem 0;
   text-align: center;
+  background-color: transparent;
 }
 #master-header .header .header-right .header-inner .menu-item .menu-item-has-children {
   display: flex;

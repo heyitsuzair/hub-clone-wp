@@ -62,7 +62,8 @@ class Customizer_Styles
         $brand_hover_color = get_theme_mod('brand-hover-color-setting') == '' ? '#000000' : get_theme_mod('brand-hover-color-setting');
         $hamburger_color = get_theme_mod('hamburger-color-setting') == '' ? '#000000' : get_theme_mod('hamburger-color-setting');
         $drawer_bg_color = get_theme_mod('drawer-bg-color-setting') == '' ? '#f6f6f6' : get_theme_mod('drawer-bg-color-setting');
-
+        $drawer_menu_color = get_theme_mod('drawer-menu-color-setting') == '' ? '#000000' : get_theme_mod('drawer-menu-color-setting');
+        $drawer_menu_hover_color =  get_theme_mod('drawer-menu-hover-color-setting') == '' ? '#000000' : get_theme_mod('drawer-menu-hover-color-setting');
         /**
          * Check If Left Panel Of Single Blog Is Disabled And Right Is Enabled Than Modify Right Panel CSS
          */
@@ -143,6 +144,22 @@ label.hamburger>i::after {
 
 .drawer-list {
     background-color: <?php echo $drawer_bg_color ?>;
+}
+
+#master-header .header .header-right .header-inner .menu-item a {
+    color: <?php echo $drawer_menu_color ?>;
+}
+
+#master-header .header .header-right .header-inner .menu-item a:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
+}
+
+.menu-arrow {
+    color: <?php echo $drawer_menu_color ?>;
+}
+
+.menu-arrow:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
 }
 </style>
 
