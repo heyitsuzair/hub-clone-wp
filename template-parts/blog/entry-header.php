@@ -16,6 +16,10 @@ $post_author = $getUser_name->user_login;
 // Get Meta Display Setting --------------------------------->
 $meta_display = get_theme_mod('post-meta-display-setting');
 // Get Meta Display Setting --------------------------------->
+
+// Get Post Moral ----------------------------------->
+$post_moral = do_shortcode('[get_post_moral post_id=' . get_the_ID() . ']');
+// Get Post Moral ----------------------------------->
 ?>
 
 <?php
@@ -46,7 +50,13 @@ if (is_home()) {
             <h2 class="fw-bold">
                 <?php the_title(); ?>
             </h2>
-            <h5 class="single-blog-moto">Success Needs Hardwork</h5>
+            <?php
+                if ($post_moral !== '') :
+                ?>
+            <h5 class="single-blog-moto"><?php echo esc_html_e($post_moral) ?></h5>
+            <?php
+                endif
+                ?>
         </div>
         <div class="text-lg-end text-md-start text-sm-start post-img">
             <?php echo has_post_thumbnail() ? the_post_thumbnail('post-thumbnail img-thumbnail rounded p-0') : get_place_holder_image('attachment-post-thumbnail img-thumbnail rounded p-0'); ?>

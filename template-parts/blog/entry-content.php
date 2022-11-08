@@ -43,6 +43,10 @@ if ($left_panel_display == true && $right_panel_display == true)
     $full_width_column = '8';
 // Check If The Left And Right Panel Is Enabled Or Not, If Enabled Than Set $full_width_column Accordingly
 
+// Get Post Moral ----------------------------------->
+$post_moral = do_shortcode('[get_post_moral post_id=' . get_the_ID() . ']');
+// Get Post Moral ----------------------------------->
+
 ?>
 
 <?php
@@ -98,7 +102,13 @@ if (is_home()) {
         </div>
         <?php endif; ?>
         <div class="col-lg-<?php echo $full_width_column ?> col-sm-12 col-md-12 px-5 text-center">
-            <h4 class="text-start my-5 single-blog-moto fst-italic">Success Needs Hardwork</h4>
+            <?php
+                if ($post_moral !== '') :
+                ?>
+            <h4 class="text-start my-5 single-blog-moto fst-italic"><?php echo esc_html_e($post_moral) ?></h4>
+            <?php
+                endif
+                ?>
             <div class="single-blog-content"><?php the_content(); ?></div>
         </div>
         <?php
