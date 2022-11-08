@@ -9,6 +9,7 @@
 namespace HUB_WP\Inc;
 
 use HUB_WP\Inc\Traits\Singleton as TraitsSingleton;
+use WP_Customize_Color_Control;
 use WP_Customize_Control;
 
 class Customizer_Single_Blog
@@ -82,6 +83,8 @@ class Customizer_Single_Blog
         $this->register_left_panel_customization($wp_customize);
         $this->register_right_panel_customization($wp_customize);
         $this->register_right_panel_text_customization($wp_customize);
+        $this->register_content_color_customization($wp_customize);
+        $this->register_moral_color_customization($wp_customize);
     }
     public function register_left_panel_customization($wp_customize)
     {
@@ -130,5 +133,43 @@ class Customizer_Single_Blog
             'settings' => 'post-right-panel-text-setting',
             'type' => 'text',
         ]));
+    }
+    public function register_content_color_customization($wp_customize)
+    {
+        // Content Color Setting
+        $wp_customize->add_setting('post-content-color-setting', [
+            'default' => '#212529',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Content Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'post-content-color-control',
+            array(
+                'label'    => __('Content Color', 'wp_hub'),
+                'section'  => 'post-section',
+                'settings' => 'post-content-color-setting',
+            )
+        ));
+    }
+    public function register_moral_color_customization($wp_customize)
+    {
+        // Moral Color Setting
+        $wp_customize->add_setting('post-moral-color-setting', [
+            'default' => '#737373',
+            'capability'        => 'edit_theme_options',
+            'sanitize_callback' => [$this, 'sanitize_hex_color'],
+        ]);
+        // Moral Color Control
+        $wp_customize->add_control(new WP_Customize_Color_Control(
+            $wp_customize,
+            'post-moral-color-control',
+            array(
+                'label'    => __('Moral Color', 'wp_hub'),
+                'section'  => 'post-section',
+                'settings' => 'post-moral-color-setting',
+            )
+        ));
     }
 }

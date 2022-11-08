@@ -52,9 +52,11 @@ class Customizer_Styles
         $footer_paddings = get_theme_mod('footer-paddings-setting') == '' ? '2rem' : get_theme_mod('footer-paddings-setting') . 'rem';
 
         /**
-         *  Check If Seperators Color Value Is Empty Set The Default Seperator Color ------------------>
+         *  Check If Colors Value Is Empty Set The Default Colors ------------------>
          */
         $prefooter_seperators_color = get_theme_mod('prefooter-seperator-color-setting') == '' ? '#ffffff12' : get_theme_mod('prefooter-seperator-color-setting');
+        $post_moral_color = get_theme_mod('post-moral-color-setting') == '' ? '#737373' : get_theme_mod('post-moral-color-setting');
+        $post_content_color = get_theme_mod('post-content-color-setting') == '' ? '#212529' : get_theme_mod('post-content-color-setting');
 
         /**
          * Check If Left Panel Of Single Blog Is Disabled And Right Is Enabled Than Modify Right Panel CSS
@@ -105,6 +107,14 @@ class Customizer_Styles
 
 .single-blog .single-blog-content .content-right {
     transform: translateX(<?php echo $is_right_enabled ? 0 : ""?>rem);
+}
+
+.single-blog .single-blog-moto {
+    color: <?php echo $post_moral_color ?>;
+}
+
+.single-blog .single-blog-content {
+    color: <?php echo $post_content_color ?>;
 }
 </style>
 
