@@ -66,6 +66,7 @@ class Register_Metaboxes
          * Check If Current User Is Authorized To Do This
          */
 
+
         if (!current_user_can('edit_posts')) return;
 
         /**
