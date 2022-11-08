@@ -6,8 +6,12 @@
  * @package HUB_WP
  */
 
-
-
+// Getting Username For Single Blog Page --------------------------->
+global $post;
+$get_AuthorId = $post->post_author;
+$getUser_name = get_userdata($get_AuthorId);
+$post_author = $getUser_name->user_login;
+// Getting Username For Single Blog Page --------------------------->
 ?>
 
 <?php
@@ -48,7 +52,7 @@ if (is_home()) {
         <div class="left d-flex flex-row gap-3 align-items-center">
             <span class="fw-600"><?php echo get_the_date('F j, Y'); ?></span>
             <span class="dot"></span>
-            <span class="fw-600"><?php the_author(); ?></span>
+            <span class="fw-600"><?php echo $post_author ?></span>
         </div>
         <div class="text-dark fw-600">
             <?php echo estimate_reading_time_in_minutes(get_the_content()); ?> Min Read

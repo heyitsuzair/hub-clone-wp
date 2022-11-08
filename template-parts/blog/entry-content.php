@@ -16,6 +16,13 @@ $url .= $_SERVER['HTTP_HOST'];
 // Append the requested resource location to the URL   
 $url .= $_SERVER['REQUEST_URI'];
 
+// Getting Username For Single Blog Page --------------------------->
+global $post;
+$get_AuthorId = $post->post_author;
+$getUser_name = get_userdata($get_AuthorId);
+$post_author = $getUser_name->user_login;
+// Getting Username For Single Blog Page --------------------------->
+
 ?>
 
 <?php
@@ -35,10 +42,14 @@ if (is_home()) {
     <div class="row">
         <div class="col-lg-2 d-sm-none d-md-none d-lg-block content-left single-<?php the_ID() ?>-content-left">
             <div class="d-flex flex-column content-left-author text-center gap-5 mx-5 pt-5">
-                <div class="d-flex align-items-center text-center justify-content-end gap-2 author-info">
-                    <img class="rounded" src="<?php echo get_avatar_url(get_the_author()); ?>"
-                        alt="<?php the_author(); ?>">
-                    <span class="author-name"><?php the_author() ?></span>
+                <div class="author-info">
+                    <img class="rounded" src="<?php echo get_avatar_url($post_author); ?>"
+                        alt="<?php echo $post_author ?>">
+
+                    <div class="author-name">
+
+                        <span><?php echo $post_author ?></span>
+                    </div>
                 </div>
                 <div class="text-start d-flex flex-column gap-4 socials <?php the_ID() ?>-socials">
                     <a class="td-none social-link fb"
