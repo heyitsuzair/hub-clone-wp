@@ -2,7 +2,6 @@
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 2;
     height: 100%;
     top: 0;
     bottom: 0;
@@ -10,4 +9,21 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transition: .5s all;
+    &.active{
+        opacity: 1;
+        z-index: 2;
+    }
+    .search-form-input{
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid #d3d3d3;
+        padding: .2rem 0;
+        transition: .5s all;
+        &:focus{
+            border-bottom: 1px solid black;
+
+        }
+    }
 }

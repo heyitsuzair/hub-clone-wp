@@ -6,6 +6,11 @@
  */
 ?>
 
+<div class="search-form">
+    <?php
+    get_search_form();
+    ?>
+</div>
 <div class="header mx-3 py-3 d-flex justify-content-between align-items-center">
     <div class="col-3 header-left">
         <?php
@@ -39,11 +44,6 @@
                     <li>
                         <i class="fa fa-search" id="search-icon" aria-hidden="true"></i>
                     </li>
-                </div>
-                <div class="search-form">
-                    <?php
-                    get_search_form();
-                    ?>
                 </div>
             </section>
         </div>

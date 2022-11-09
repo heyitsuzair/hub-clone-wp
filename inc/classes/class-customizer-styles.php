@@ -210,6 +210,15 @@ label.hamburger>i::after {
     color: <?php echo $drawer_menu_hover_color ?>;
 }
 
+#close-search {
+    color: <?php echo $drawer_menu_color ?>;
+    cursor: pointer;
+}
+
+#close-search:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
+}
+
 .search-form {
     background-color: <?php echo $drawer_bg_color ?>;
 }
