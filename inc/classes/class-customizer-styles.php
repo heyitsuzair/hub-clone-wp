@@ -175,9 +175,23 @@ label.hamburger>i::after {
     ?>;
 }
 
+.post-row .post-card .entry-header .blog-card-badge ul a {
+    color: <?php echo $text_color;
+    ?>;
+}
+
+.post-row .post-card .entry-header .blog-card-badge ul a:hover {
+    color: <?php echo $text_hover_color;
+    ?>;
+}
+
+.single-blog .single-blog-header .single-blog-category .post-categories li a {
+    color: <?php echo $text_color ?>;
+}
+
 .post-row .post-card .entry-header .blog-card-badge:hover {
-    color: <?php echo $text_hover_color ?>;
     background-color: <?php echo $secondary_color ?>;
+    color: <?php echo $text_hover_color ?>;
 }
 
 .heading {
@@ -190,11 +204,12 @@ label.hamburger>i::after {
 
 .next-prev-links .navigation ul li.active a {
     background-color: <?php echo $secondary_color ?>;
-    color: white;
+    color: <?php echo $text_hover_color ?>;
 }
 
 .next-prev-links .navigation ul li a:hover {
     background-color: <?php echo $secondary_color ?>;
+    color: <?php echo $text_hover_color ?>;
 }
 </style>
 
