@@ -64,6 +64,12 @@ class Customizer_Styles
         $drawer_bg_color = get_theme_mod('drawer-bg-color-setting') == '' ? '#f6f6f6' : get_theme_mod('drawer-bg-color-setting');
         $drawer_menu_color = get_theme_mod('drawer-menu-color-setting') == '' ? '#000000' : get_theme_mod('drawer-menu-color-setting');
         $drawer_menu_hover_color =  get_theme_mod('drawer-menu-hover-color-setting') == '' ? '#000000' : get_theme_mod('drawer-menu-hover-color-setting');
+        $primary_color = get_theme_mod('primary-color-setting') == '' ? '#ffffff' : get_theme_mod('primary-color-setting');
+        $secondary_color = get_theme_mod('secondary-color-setting') == '' ? '#184341' : get_theme_mod('secondary-color-setting');
+        $text_color = get_theme_mod('text-color-setting') == '' ? '#000000' : get_theme_mod('text-color-setting');
+        $text_hover_color = get_theme_mod('text-hover-color-setting') == '' ? '#000000' : get_theme_mod('text-hover-color-setting');
+        $heading_color = get_theme_mod('heading-color-setting') == '' ? '#184341' : get_theme_mod('heading-color-setting');
+        $postcard_color = get_theme_mod('postcard-color-setting') == '' ? '#eef2f4' : get_theme_mod('postcard-color-setting');
         /**
          * Check If Left Panel Of Single Blog Is Disabled And Right Is Enabled Than Modify Right Panel CSS
          */
@@ -160,6 +166,49 @@ label.hamburger>i::after {
 
 .menu-arrow:hover {
     color: <?php echo $drawer_menu_hover_color ?>;
+}
+
+.post-row .post-card .entry-header .blog-card-badge {
+    background-color: <?php echo $primary_color;
+    ?>;
+    color: <?php echo $text_color;
+    ?>;
+}
+
+.post-row .post-card .entry-header .blog-card-badge:hover {
+    color: <?php echo $text_hover_color ?>;
+    background-color: <?php echo $secondary_color ?>;
+}
+
+.post-row .post-card .entry-header .blog-card-badge ul li a {
+    color: <?php echo $text_color ?>;
+}
+
+.post-row .post-card .entry-header .blog-card-badge ul li a:hover {
+    color: <?php echo $text_hover_color ?>;
+}
+
+.heading {
+    color: <?php echo $heading_color ?>;
+}
+
+.post-row .post-card {
+    background-color: <?php echo $postcard_color ?>;
+}
+
+.next-prev-links .navigation ul li.active a {
+    background-color: <?php echo $primary_color ?>;
+    color: <?php echo $text_hover_color ?>;
+}
+
+.next-prev-links .navigation ul li a:hover {
+    background-color: <?php echo $primary_color ?>;
+    color: <?php echo $text_hover_color ?>;
+
+}
+
+.single-blog .single-blog-header .single-blog-category .post-categories li a {
+    color: <?php echo $secondary_color ?>;
 }
 </style>
 
