@@ -13,19 +13,20 @@
         display: flex;
         z-index: 2;
     }
-    .search-form-input{
-        background-color: transparent;
-        border: none;
-        outline: none;
-        border-bottom: 1px solid #d3d3d3;
-        padding: .2rem 0;
-        transition: .5s all;
-        &:focus{
-            border-bottom: 1px solid black;
+   
 
-        }
+}
+.search-form-input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #d3d3d3;
+    padding: .2rem 0;
+    transition: .5s all;
+    &:focus{
+        border-bottom: 2px solid black;
+
     }
-
 }
 .search-trigger{
     cursor: pointer;

@@ -721,16 +721,17 @@ label.hamburger > i:after {
   display: flex;
   z-index: 2;
 }
-.search-form .search-form-input {
+
+.search-form-input {
   background-color: transparent;
   border: none;
   outline: none;
-  border-bottom: 1px solid #d3d3d3;
+  border-bottom: 2px solid #d3d3d3;
   padding: 0.2rem 0;
   transition: 0.5s all;
 }
-.search-form .search-form-input:focus {
-  border-bottom: 1px solid black;
+.search-form-input:focus {
+  border-bottom: 2px solid black;
 }
 
 .search-trigger {
