@@ -24,7 +24,7 @@ $post_moral = do_shortcode('[get_post_moral post_id=' . get_the_ID() . ']');
 
 <?php
 
-if (is_home()  || is_search()) {
+if (is_home() || is_search() || is_category()) {
 
 
 ?>
