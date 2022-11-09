@@ -51,7 +51,7 @@
 #master-header .header .header-right .header-inner .menu-item .sub-menu.active {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
 }
 
@@ -108,9 +108,15 @@ ul {
   -ms-transform: translatex(-100vw);
   box-sizing: border-box;
   pointer-events: none;
-  padding-top: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   transition: width 475ms ease-out, transform 450ms ease, border-radius 0.8s 0.1s ease;
   border-bottom-left-radius: 100vw;
+}
+.drawer-list .menu-main-header-menu-container {
+  width: 100%;
 }
 .drawer-list ul {
   height: 100%;
@@ -698,6 +704,38 @@ label.hamburger > i:after {
     align-items: center;
     gap: 2rem;
   }
+}
+
+.search-form {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.search-form.active {
+  display: flex;
+  z-index: 2;
+}
+
+.search-form-input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #d3d3d3;
+  padding: 0.2rem 0;
+  transition: 0.5s all;
+}
+.search-form-input:focus {
+  border-bottom: 2px solid black;
+}
+
+.search-trigger {
+  cursor: pointer;
 }
 
 * {

@@ -10,8 +10,6 @@ namespace HUB_WP\Inc;
 
 use HUB_WP\Inc\Traits\Singleton as TraitsSingleton;
 use WP_Customize_Color_Control;
-use WP_Customize_Range_Control;
-use WP_Range_Control;
 
 class Customizer_Colors
 {

@@ -1,11 +1,11 @@
 (function ($) {
-  const lefTarget = $(".content-left");
+  const leftTarget = $(".content-left");
   var contentLeftTrigger = new Waypoint({
-    element: lefTarget,
+    element: leftTarget,
     handler: function (direction) {
       direction === "down"
-        ? $(lefTarget).addClass("active")
-        : $(lefTarget).removeClass("active");
+        ? $(leftTarget).addClass("active")
+        : $(leftTarget).removeClass("active");
     },
   });
   const rightTrigger = $(".content-right");
