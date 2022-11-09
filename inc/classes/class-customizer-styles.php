@@ -210,6 +210,15 @@ label.hamburger>i::after {
 .single-blog .single-blog-header .single-blog-category .post-categories li a {
     color: <?php echo $secondary_color ?>;
 }
+
+#search-icon {
+    color: <?php echo $drawer_menu_color ?>;
+    cursor: pointer;
+}
+
+#search-icon:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
+}
 </style>
 
 
