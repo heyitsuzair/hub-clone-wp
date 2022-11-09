@@ -31,12 +31,12 @@
     </div>
     <div class="col-9 header-right d-flex justify-content-end">
         <div class="header-inner">
-
             <input id="hamburger" class="hamburger" type="checkbox" />
             <label class="hamburger" for="hamburger">
                 <i></i>
             </label>
             <section class="drawer-list">
+
                 <?php
                 wp_nav_menu(['theme_location' => 'primary', 'menu_class' => 'd-flex justify-content-between list-unstyled flex-column align-items-center'])
                 ?>
