@@ -23,7 +23,11 @@ $post_moral = do_shortcode('[get_post_moral post_id=' . get_the_ID() . ']');
 ?>
 
 <?php
+<<<<<<< HEAD
 if (is_home()  || is_search()) {
+=======
+if (is_home() || is_search()) {
+>>>>>>> search-page
 ?>
 <header class="d-flex align-items-center justify-content-between gap-3 entry-header post-<?php the_ID();  ?>-header">
     <span class="blog-card-badge">
