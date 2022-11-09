@@ -70,10 +70,15 @@
     -ms-transform: translatex(-100vw);
     box-sizing: border-box;
     pointer-events: none;
-    padding-top: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     transition: width 475ms ease-out, transform 450ms ease, border-radius .8s .1s ease;
     border-bottom-left-radius: 100vw;
-
+    .menu-main-header-menu-container{
+      width: 100%;
+    }
     ul {
       height: 100%;
       width: 100%;

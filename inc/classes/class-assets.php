@@ -63,6 +63,7 @@ class Assets
         wp_register_script('waypoints_js', HUB_WP_DIR_URI . '/assets/libraries/jquery.waypoints.min.js', ['jquery'], false, true);
         wp_register_script('header_js', HUB_WP_DIR_URI . '/assets/js/header/index.js', ['jquery'], false, true);
         wp_register_script('single_blog_js', HUB_WP_DIR_URI . '/assets/js/single_blog/index.js', ['jquery', 'waypoints_js'], false, true);
+        wp_register_script('search_js', HUB_WP_DIR_URI . '/assets/js/search/index.js', ['jquery'], false, true);
 
 
         /**
@@ -72,5 +73,6 @@ class Assets
         wp_enqueue_script('header_js');
         wp_enqueue_script('single_blog_js');
         wp_enqueue_script('waypoints_js');
+        wp_enqueue_script('search_js');
     }
 }
