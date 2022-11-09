@@ -430,8 +430,6 @@ label.hamburger > i:after {
   color: white;
 }
 .post-row .post-card .entry-header .blog-card-badge {
-  background-color: #fff;
-  color: #000;
   border-radius: 50rem;
   text-align: center;
   padding: 0.5rem 1rem;
@@ -441,13 +439,11 @@ label.hamburger > i:after {
   font-size: 15px;
 }
 .post-row .post-card .entry-header .blog-card-badge:hover {
-  background-color: #184341;
   box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 29px 1px rgba(0, 0, 0, 0.5);
-  color: white;
 }
-.post-row .post-card .entry-header .blog-card-badge:hover a {
+.post-row .post-card .entry-header .blog-card-badge:hover ul a {
   color: white;
 }
 .post-row .post-card .entry-header .blog-card-badge ul a {
