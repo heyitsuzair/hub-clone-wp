@@ -148,7 +148,7 @@ class Customizer_Colors
     {
         // Text Hover Color Setting
         $wp_customize->add_setting('text-hover-color-setting', [
-            'default' => '#000000',
+            'default' => '#ffffff',
             'capability'        => 'edit_theme_options',
             'sanitize_callback' => [$this, 'sanitize_hex_color'],
         ]);

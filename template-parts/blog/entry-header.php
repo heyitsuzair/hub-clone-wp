@@ -34,7 +34,7 @@ if (is_home() || is_search() || is_category()) {
             the_category();
             ?>
     </span>
-    <span class="date-published">
+    <span class="blog-card-badge">
         <?php echo estimate_reading_time_in_minutes(get_the_content()); ?> Min Read
     </span>
 </header>
@@ -50,7 +50,7 @@ if (is_home() || is_search() || is_category()) {
                     the_category();
                     ?>
             </span>
-            <h2 class="fw-bold">
+            <h2 class="fw-bold heading">
                 <?php the_title(); ?>
             </h2>
             <?php

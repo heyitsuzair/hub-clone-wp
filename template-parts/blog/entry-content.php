@@ -54,7 +54,7 @@ if (is_home() || is_search() || is_category()) {
 ?>
 <div class="post-<?php the_ID();  ?>-content entry-content my-5">
     <a href="<?php the_permalink() ?>" class="td-none">
-        <h4 class="fw-bold color-primary">
+        <h4 class="fw-bold heading">
             <?php the_title() ?>
         </h4>
     </a>

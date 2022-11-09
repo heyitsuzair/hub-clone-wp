@@ -447,7 +447,6 @@ label.hamburger > i:after {
   color: white;
 }
 .post-row .post-card .entry-header .blog-card-badge ul a {
-  color: black;
   text-decoration: none;
 }
 .post-row .post-card .entry-content {
@@ -532,7 +531,6 @@ label.hamburger > i:after {
 }
 .single-blog .single-blog-header .single-blog-category .post-categories li a {
   text-decoration: none;
-  color: #184341;
 }
 .single-blog .single-blog-header .publish {
   border-bottom: 2px solid #d3d3d3;
