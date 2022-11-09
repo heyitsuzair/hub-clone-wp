@@ -26,7 +26,7 @@
                     display: none;
 
                     &.active{
-                        @include flex(center,center,column);
+                        @include flex(center,flex-start,column);
                     }
                 }
                 }

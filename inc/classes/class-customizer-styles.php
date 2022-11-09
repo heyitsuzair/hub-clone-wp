@@ -194,7 +194,12 @@ label.hamburger>i::after {
     color: <?php echo $text_hover_color ?>;
 }
 
-.heading {
+.post-row .post-card .entry-header .blog-card-badge ul li a {
+    color: <?php echo $text_color ?>;
+}
+
+.search-form .heading {
+
     color: <?php echo $heading_color ?>;
 }
 
@@ -203,6 +208,7 @@ label.hamburger>i::after {
 }
 
 .next-prev-links .navigation ul li.active a {
+
     background-color: <?php echo $secondary_color ?>;
     color: <?php echo $text_hover_color ?>;
 }
@@ -210,6 +216,39 @@ label.hamburger>i::after {
 .next-prev-links .navigation ul li a:hover {
     background-color: <?php echo $secondary_color ?>;
     color: <?php echo $text_hover_color ?>;
+}
+
+.next-prev-links .navigation ul li a:hover {
+    background-color: <?php echo $secondary_color ?>;
+    color: white;
+
+}
+
+.single-blog .single-blog-header .single-blog-category .post-categories li a {
+    color: <?php echo $secondary_color ?>;
+}
+
+
+#search-icon {
+    color: <?php echo $drawer_menu_color ?>;
+    cursor: pointer;
+}
+
+#search-icon:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
+}
+
+#close-search {
+    color: <?php echo $drawer_menu_color ?>;
+    cursor: pointer;
+}
+
+#close-search:hover {
+    color: <?php echo $drawer_menu_hover_color ?>;
+}
+
+.search-form {
+    background-color: <?php echo $drawer_bg_color ?>;
 }
 </style>
 

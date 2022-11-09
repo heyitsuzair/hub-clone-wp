@@ -11,7 +11,7 @@
 ?>
 
 <?php
-if (is_home()) {
+if (is_home() || is_search() || is_category()) {
 ?>
 <div class="post-<?php the_ID();  ?>-content d-flex entry-footer gap-3 align-items-center my-3">
     <div class="author-pic">

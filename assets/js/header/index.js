@@ -7,4 +7,22 @@
       e.currentTarget.nextElementSibling.classList.toggle("active");
     });
   });
+
+  // Get The Hamburger Icon ---------------------->
+  const hamburger = $(".hamburger");
+  // Get The Hamburger Icon ---------------------->
+
+  // Get Search Form ---------------->
+  const searchForm = $(".search-form");
+  // Get Search Form ---------------->
+
+  // Listen To Click Event On Hamburger -------------------------->
+  $(hamburger).on("click", () => {
+    // ? Check If Search Form Is Active Than Remove Its Active Class -------------->
+    if ($(searchForm).hasClass("active")) {
+      $(searchForm).removeClass("active");
+    }
+    // ? Check If Search Form Is Active Than Remove Its Active Class -------------->
+  });
+  // Listen To Click Event On Hamburger -------------------------->
 })(jQuery);
