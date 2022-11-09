@@ -184,15 +184,8 @@ label.hamburger>i::after {
     color: <?php echo $text_color ?>;
 }
 
-<<<<<<< HEAD
-.heading {
-=======
-.post-row .post-card .entry-header .blog-card-badge ul li a:hover {
-    color: <?php echo $text_hover_color ?>;
-}
-
 .search-form .heading {
->>>>>>> search-page
+
     color: <?php echo $heading_color ?>;
 }
 
@@ -201,7 +194,7 @@ label.hamburger>i::after {
 }
 
 .next-prev-links .navigation ul li.active a {
-<<<<<<< HEAD
+
     background-color: <?php echo $secondary_color ?>;
     color: white;
 }
@@ -212,27 +205,16 @@ label.hamburger>i::after {
 
 }
 
-=======
-    background-color: <?php echo $primary_color ?>;
-    color: <?php echo $text_hover_color ?>;
-}
-
 .next-prev-links .navigation ul li a:hover {
-    background-color: <?php echo $primary_color ?>;
-    color: <?php echo $text_hover_color ?>;
+    background-color: <?php echo $secondary_color ?>;
+    color: white;
 
 }
-
-
->>>>>>> search-page
 
 .single-blog .single-blog-header .single-blog-category .post-categories li a {
     color: <?php echo $secondary_color ?>;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> search-page
 
 #search-icon {
     color: <?php echo $drawer_menu_color ?>;
