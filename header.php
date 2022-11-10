@@ -4,6 +4,11 @@
  * Theme Header
  * @package HUB_WP
  */
+
+// Get Header Display Setting --------------------------------------------->
+$is_header_enabled = get_theme_mod('header-display-setting');
+// Get Header Display Setting --------------------------------------------->
+
 ?>
 <!DOCTYPE html>
 <html lang="<?php language_attributes(); ?>">
@@ -22,7 +27,13 @@
     }
     ?>
     <div id="page">
+        <?php
+        if ($is_header_enabled) :
+        ?>
         <header id="master-header">
             <?php get_template_part('template-parts/header/MainHeader'); ?>
         </header>
+        <?php
+        endif;
+        ?>
         <div id="content">

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Front Page File
+ * Author Page File
  *
  * @package Bloggar_WP
  */
@@ -11,11 +11,23 @@
 get_header();
 ?>
 
-<main class="container my-5-5">
+<main class="container my-5">
     <?php
-    if (is_home() && !is_front_page()) {
+    if (is_author() && !is_front_page()) {
     ?>
     <div class="blog-content">
+        <?php
+            // If No Post Found Hide This Area
+            if (!empty(get_the_author())) :
+            ?>
+        <header class="my-5">
+            <h3 class="page-title">
+                <?php _e('Blogs Written By ', 'wp_hub'); ?> <?php the_author(); ?>
+            </h3>
+        </header>
+        <?php
+            endif
+            ?>
         <?php
             if (have_posts()) {
             ?>

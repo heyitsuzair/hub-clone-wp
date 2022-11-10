@@ -1,0 +1,12 @@
+#main-footer{
+    margin: -0.2rem;
+
+    .footer-content{
+        @media (max-width:576px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+}

@@ -1,21 +1,34 @@
 <?php
 
 /**
- * Front Page File
+ * Search Result Page File
  *
  * @package Bloggar_WP
  */
+global $wp_query;
 ?>
 
 <?php
 get_header();
 ?>
 
-<main class="container my-5-5">
+<main class="container my-5">
     <?php
-    if (is_home() && !is_front_page()) {
+    if (is_category() && !is_front_page()) {
     ?>
     <div class="blog-content">
+        <?php
+            // If No Post Found Hide This Area
+            if ($wp_query->found_posts !== 0) :
+            ?>
+        <header class="my-5">
+            <h3 class="page-title">
+                <?php single_cat_title(); ?>
+            </h3>
+        </header>
+        <?php
+            endif
+            ?>
         <?php
             if (have_posts()) {
             ?>

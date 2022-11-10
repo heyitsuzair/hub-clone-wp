@@ -1,5 +1,4 @@
 #master-header{
-    background-color: $color_gray;
     .header{
         .header-right{
             .header-inner{
@@ -7,10 +6,9 @@
                     text-align: center;
                     a{
                         text-decoration: $td_none;
-                        color: black;
                         padding: .5rem 0;
                         text-align: center;
-                        background-color: $color_gray
+                        background-color: transparent;
                     }
                    .menu-item-has-children {
                     @include flex(center,center,column);
@@ -28,7 +26,7 @@
                     display: none;
 
                     &.active{
-                        @include flex(center,center,column);
+                        @include flex(center,flex-start,column);
                     }
                 }
                 }

@@ -1,0 +1,110 @@
+.single-blog{
+    background-color: $color_gray;
+    .single-blog-header{
+        padding: 10rem;
+        @media (max-width:991px){
+            padding: 6rem;
+        }
+        @media (max-width:576px){
+            padding: 3rem;
+        }
+        .single-blog-category{
+            .post-categories{
+                li{
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .publish{
+            border-bottom: 2px solid #d3d3d3;
+            margin-top: 4rem;
+            padding-bottom: 1.5rem;
+
+            @media (max-width:576px){
+                flex-direction: column;
+            }
+        }
+        .attachment-post-thumbnail{
+            width: 50%;
+            object-fit: cover;
+            @media (max-width:991px){
+                width: 100%;
+            }
+        }
+        .post-img{
+            @media (max-width:991px){
+                order: 1;
+            }
+        }
+       .single-blog-inner{
+        @media (max-width:576px){
+            flex-direction: column;
+        }
+        .single-blog-meta{
+            @media (max-width:991px){
+                order: 2;
+            }
+        }
+       }
+    }
+    .single-blog-content{
+        .content-left{
+            transition: .5s all ease;
+            transform: translateX(-14rem);
+            @media(max-width:576px){
+                display: none;
+            }
+            &.active{
+                transform: translateX(0);
+            }
+            .content-left-author{
+                position: sticky;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+            
+                .author-info{
+                    margin: 0 -7rem;
+                    .author-name{
+                        transform: rotate(-90deg) translateY(80px) translateX(59px);
+                    }
+                }
+                .socials{
+                    .social-link{
+                        color: black;
+                        display: flex;
+                        gap: 1rem;
+                        align-items: center;
+                        justify-content: center;
+                        padding-bottom: .5rem;
+                        border-bottom: 1px solid #d3d3d3;
+                    }
+                }
+            }
+        }
+        .content-right{
+            transition: .5s all ease;
+            transform: translateX(9rem);
+            @media(max-width:576px){
+                display: none;
+            }
+            &.active{
+                transform: translateX(0);
+            }
+            .content-right-author{
+                position: sticky;
+                bottom: 0;
+                top: 0;
+                left: 0;
+                right: 0;
+            
+               .contact{
+                transform: rotate(-90deg) translateX(-5rem);
+               }
+            }
+        }
+    }
+}
