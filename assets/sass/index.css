@@ -446,10 +446,12 @@ label.hamburger > i:after {
   min-height: 10vh;
 }
 .post-row .post-card .entry-footer .author-pic {
-  width: 15%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 .post-row .post-card .entry-footer .author-pic img {
-  width: 100%;
+  width: 25%;
 }
 
 .next-prev-links .navigation ul {
