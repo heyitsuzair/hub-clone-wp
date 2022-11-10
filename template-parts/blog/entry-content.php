@@ -50,7 +50,7 @@ $post_moral = do_shortcode('[get_post_moral post_id=' . get_the_ID() . ']');
 ?>
 
 <?php
-if (is_home() || is_search() || is_category()) {
+if (is_home() || is_search() || is_category() || is_author()) {
 ?>
 <div class="post-<?php the_ID();  ?>-content entry-content my-5">
     <a href="<?php the_permalink() ?>" class="td-none">
