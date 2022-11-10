@@ -1,0 +1,10 @@
+#pre-footer{
+    color: white;
+    padding: 3rem 0;
+
+    .pre-footer-content{
+        @media (max-width:576px){
+            flex-direction: column;
+        }
+    }
+}
