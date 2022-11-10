@@ -198,6 +198,10 @@ label.hamburger>i::after {
     color: <?php echo $text_color ?>;
 }
 
+.heading {
+    color: <?php echo $heading_color ?>;
+}
+
 .search-form .heading {
 
     color: <?php echo $heading_color ?>;
