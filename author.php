@@ -5,7 +5,6 @@
  *
  * @package Bloggar_WP
  */
-$author = get_queried_object();
 ?>
 
 <?php
