@@ -211,6 +211,14 @@ label.hamburger>i::after {
     background-color: <?php echo $secondary_color ?>;
     color: <?php echo $text_hover_color ?>;
 }
+
+.author-name {
+    color: <?php echo $text_color ?>;
+}
+
+.author-name:hover {
+    color: <?php echo $text_hover_color ?>;
+}
 </style>
 
 
