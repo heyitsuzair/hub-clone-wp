@@ -50,9 +50,11 @@ if (is_home()) {
     </div>
     <div class="publish d-flex align-items-center flex-lg-row flex-md-row flex-sm-row justify-content-between gap-3">
         <div class="left d-flex flex-row gap-3 align-items-center">
-            <span class="fw-600"><?php echo get_the_date('F j, Y'); ?></span>
+            <span class="fw-600 text-dark"><?php echo get_the_date('F j, Y'); ?></span>
             <span class="dot"></span>
-            <span class="fw-600"><?php echo $post_author ?></span>
+            <a href="<?php echo esc_url(get_author_posts_url($get_AuthorId)) ?>" class="td-none text-dark">
+                <span class="fw-600"><?php echo $post_author ?></span>
+            </a>
         </div>
         <div class="text-dark fw-600">
             <?php echo estimate_reading_time_in_minutes(get_the_content()); ?> Min Read
