@@ -62,9 +62,11 @@
     }
     .entry-footer{
         .author-pic{
-            width: 15%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             img{
-                width: 100%;
+                width: 25%;
             }
         }
     }
