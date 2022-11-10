@@ -175,7 +175,7 @@ class Customizer_Prefooter
     {
         // Seperator Color Setting
         $wp_customize->add_setting('prefooter-seperator-color-setting', [
-            'default' => '#ffffff12',
+            'default' => '#292928',
             'capability' => 'edit_theme_options',
             'sanitize_callback' => [$this, 'sanitize_hex_color'],
         ]);
