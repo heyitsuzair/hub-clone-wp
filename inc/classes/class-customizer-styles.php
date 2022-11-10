@@ -229,6 +229,7 @@ label.hamburger>i::after {
 
 .author-name:hover {
     color: <?php echo $text_hover_color ?>;
+}
 
 .next-prev-links .navigation ul li a:hover {
     background-color: <?php echo $secondary_color ?>;
