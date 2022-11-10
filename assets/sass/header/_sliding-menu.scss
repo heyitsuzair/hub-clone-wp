@@ -124,6 +124,7 @@
       & ~ .drawer-list {
          transform: translatex(0);
           border-bottom-left-radius: 0;
+          z-index: 1;
           li {
             transform: translatex(0);
             @include transition;
