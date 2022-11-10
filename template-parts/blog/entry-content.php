@@ -128,5 +128,7 @@ if (is_home() || is_search() || is_category() || is_author()) {
 
 </section>
 <?php
+} elseif (is_front_page()) {
+    the_content();
 }
 ?>

@@ -85,5 +85,7 @@ if (is_home() || is_search() || is_category() || is_author()) {
     </div>
 </section>
 <?php
+} elseif (is_front_page() || is_archive() || is_singular('post')) {
+    the_content();
 }
 ?>
